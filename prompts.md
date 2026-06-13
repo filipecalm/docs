@@ -7,6 +7,7 @@ Catálogo de prompts estruturados que funcionaram bem com agentes de IA (Cursor,
 - [Por que esses prompts funcionam](#por-que-esses-prompts-funcionam)
 - [Prompt 1 — Modernização React Native / Expo](#prompt-1--modernização-react-native--expo)
 - [Prompt 2 — Documentação de System Design](#prompt-2--documentação-de-system-design)
+- [Prompt 3 — Geração de Recursos Gráficos para Play Store](#prompt-3--geração-de-recursos-gráficos-para-play-store)
 - [Matriz: prompt vs. estado atual do DietOS](#matriz-prompt-vs-estado-atual-do-dietos)
 - [Como usar e adaptar](#como-usar-e-adaptar)
 - [⚠️ Observações](#️-observações)
@@ -182,6 +183,107 @@ Comece pelo diagnóstico, liste o que encontrou e aguarde confirmação antes de
 
 ---
 
+## Prompt 3 — Geração de Recursos Gráficos para Play Store
+
+**Uso:** copiar scripts de geração de assets de um projeto de referência (ex.: dietOS), adaptar para o app atual, redesenhar a logo e gerar todos os recursos obrigatórios da Play Store.  
+**Quando usar:** antes do primeiro submit à Play Store, após redesign visual, ou quando faltam screenshots/feature graphic.  
+**Resultado esperado:** scripts funcionando no projeto alvo, assets nas dimensões corretas, logo em SVG + PNG + versão monocromática.
+
+### Texto do prompt
+
+```
+# Tarefa: Geração de Recursos Gráficos para Play Store
+
+## Contexto
+Você está trabalhando em um app mobile. Existe um projeto de referência chamado **dietOS**
+que já possui scripts prontos para geração de imagens e recursos gráficos.
+
+## Etapa 1 — Copiar scripts do projeto dietOS
+Localize no projeto `dietOS` todos os scripts relacionados a:
+- Geração de imagens e assets gráficos
+- Exportação de recursos para lojas (Play Store / App Store)
+- Automação de ícones, splash screens ou banners
+
+Copie esses scripts para o projeto atual, adaptando caminhos e configurações
+conforme necessário para que funcionem neste contexto.
+
+## Etapa 2 — Gerar recursos gráficos para a Play Store
+Usando os scripts copiados (ou criando novos se necessário), gere todos os
+assets obrigatórios da Play Store nos tamanhos e formatos corretos:
+
+| Asset                  | Tamanho         | Formato |
+|------------------------|-----------------|---------|
+| Ícone do app           | 512×512 px      | PNG     |
+| Feature graphic        | 1024×500 px     | PNG/JPG |
+| Screenshots (telefone) | mín. 320px      | PNG/JPG |
+| Screenshots (tablet)   | 1080×1920 px    | PNG/JPG |
+
+## Etapa 3 — Melhorar e modernizar a logo do app
+Redesenhe a logo atual seguindo estes critérios:
+
+**Estética:**
+- Visual moderno, limpo e minimalista
+- Legível em tamanhos pequenos (ícone 48px) e grandes (splash screen)
+- Compatível com fundos claros e escuros (dark mode)
+
+**Técnico:**
+- Exportar em SVG (para escalabilidade) e PNG (para uso imediato)
+- Versão monocromática para uso em notificações Android
+- Paleta de cores coerente com a identidade visual do app
+
+## Critérios de sucesso
+- [ ] Scripts do dietOS copiados e funcionando
+- [ ] Todos os assets da Play Store gerados sem erros
+- [ ] Logo exportada em todos os formatos solicitados
+- [ ] Assets validados nas dimensões corretas
+```
+
+### Scripts de referência no dietOS
+
+| Script | Comando npm | O que faz |
+|--------|-------------|-----------|
+| `scripts/generate-play-store-assets.mjs` | `npm run assets:play-store` | Gera ícone 512px e feature graphic 1024×500 |
+| `scripts/fix-icon-padding.mjs` | (manual) | Ajusta safe zone de `icon.png`, `adaptive-icon.png` e `logo.png` |
+| `sharp` (devDependency) | — | Renderização SVG → PNG e composição de banners |
+
+### Adaptação para outro projeto (ex.: Kronos/cronometro)
+
+1. Copiar os 3 scripts acima + adicionar `generate-logo.mjs` e `validate-assets.mjs` se necessário
+2. Ajustar paleta, textos do feature banner e mocks de screenshot ao `theme/tokens.ts` do app
+3. Criar `logo.svg` e `logo-mono.svg` como fonte vetorial
+4. Adicionar ao `package.json`:
+   - `"assets:logo"`, `"assets:fix-icons"`, `"assets:play-store"`, `"assets:all"`
+   - `sharp` em `devDependencies`
+5. Executar `pnpm run assets:all` e validar com `node scripts/validate-assets.mjs`
+
+### Artefatos esperados
+
+```
+assets/
+├── images/
+│   ├── logo.svg
+│   ├── logo-mono.svg
+│   ├── logo.png
+│   ├── icon.png
+│   ├── adaptive-icon.png
+│   ├── notification-icon.png
+│   └── splash.png
+└── play-store/
+    ├── playstore-icon-512.png
+    ├── playstore-feature-1024x500.png
+    ├── screenshot-phone-*.png
+    └── screenshot-tablet-*.png
+```
+
+### Por que é melhor que "gera os assets da Play Store"
+
+- Aponta **projeto de referência** com scripts já testados (dietOS)
+- Define **dimensões exatas** por tipo de asset
+- Inclui **redesign da logo** com requisitos técnicos (SVG, mono, dark/light)
+- Lista **critérios de sucesso** verificáveis (dimensões, formatos, scripts rodando)
+
+---
+
 ## Matriz: prompt vs. estado atual do DietOS
 
 Referência cruzada do **Prompt 1** com o código em jun/2026. Detalhes em [stack.md](./stack.md) e [decisions.md](./decisions.md).
@@ -244,6 +346,7 @@ Referência cruzada do **Prompt 1** com o código em jun/2026. Detalhes em [stac
 
 1. **Prompt 2** (documentação) — baseline antes de mudanças
 2. **Prompt 1** (modernização) — uma fase por vez, com confirmação
+3. **Prompt 3** (assets Play Store) — após identidade visual estável ou antes do submit
 
 ### Variações úteis
 
