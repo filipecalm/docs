@@ -20,6 +20,7 @@ Plataformas: **Android** (produção via EAS/Play Store), **iOS** (configurado),
 | [data-flow.md](./data-flow.md) | Fluxos de autenticação, API, navegação, persistência |
 | [patterns.md](./patterns.md) | Padrões de projeto identificados no código |
 | [scripts.md](./scripts.md) | Scripts npm, PowerShell, CMD e utilitários |
+| [scripts/](./scripts/) | Espelho dos scripts + [README](./scripts/README.md) |
 | [decisions.md](./decisions.md) | ADRs inferidos das escolhas no código |
 | [prompts.md](./prompts.md) | Prompts úteis para modernização e documentação (com matriz de gaps) |
 
@@ -36,7 +37,7 @@ DietOS/
 ├── utils/               # Utilitários (i18n, rotas, PDF, etc.)
 ├── constants/           # Tokens de cor
 ├── styles/              # StyleSheets compartilhados (parcial)
-├── scripts/             # Automação de build, deploy e secrets
+├── scripts/             # Automação de build, deploy e secrets (espelhado em DietOS-docs/scripts/)
 ├── functions/           # Firebase Cloud Functions (Express API)
 ├── tests/               # Testes de regras Firestore/Storage
 ├── hosting/             # Site estático (dietos.com.br)

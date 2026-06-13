@@ -1,5 +1,7 @@
 # Scripts e Automações
 
+> **Espelho dos arquivos:** a pasta [`scripts/`](./scripts/) contém cópia de referência de todos os scripts do DietOS, com documentação detalhada em [`scripts/README.md`](./scripts/README.md).
+
 ## Sumário
 
 - [Scripts npm — raiz (package.json)](#scripts-npm--raiz-packagejson)
