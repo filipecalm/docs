@@ -1,0 +1,3 @@
+After any task that modified files, check `git status` and `git diff`, then end your response with a **Suggested commits** section listing semantic commit messages in English (Conventional Commits: `feat`, `fix`, `chore`, `docs`, etc.). Group unrelated changes into separate commits. Do not run `git commit` unless I explicitly ask.
+
+When I ask to commit, make commits, or create semantic commits: inspect git state, split changes by logical type, stage each group separately (`git add -p` when needed), and commit with English Conventional Commit messages. Never commit secrets. Never amend or force-push unless I explicitly ask.

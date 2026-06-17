@@ -19,10 +19,13 @@ Plataformas: **Android** (produção via EAS/Play Store), **iOS** (configurado),
 | [stack.md](./stack.md) | Stack completa com versões e dependências |
 | [data-flow.md](./data-flow.md) | Fluxos de autenticação, API, navegação, persistência |
 | [patterns.md](./patterns.md) | Padrões de projeto identificados no código |
-| [scripts.md](./scripts.md) | Scripts npm, PowerShell, CMD e utilitários |
+| [scripts.md](./scripts.md) | Scripts npm, PowerShell, CMD, VS Code tasks e utilitários |
 | [scripts/](./scripts/) | Espelho dos scripts + [README](./scripts/README.md) |
+| [.vscode/tasks.json](./.vscode/tasks.json) | Tasks de dev (ex.: Kill Metro porta 8081) |
 | [decisions.md](./decisions.md) | ADRs inferidos das escolhas no código |
 | [prompts.md](./prompts.md) | Prompts úteis para modernização e documentação (com matriz de gaps) |
+| [cursor-semantic-commits.md](./cursor-semantic-commits.md) | Commits semânticos no Cursor (skills, commands e User Rules globais) |
+| [cursor/](./cursor/) | Arquivos versionados para instalar em `~/.cursor/` |
 
 ## Estrutura do repositório (resumo)
 

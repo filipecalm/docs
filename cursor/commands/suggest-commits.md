@@ -1,0 +1,1 @@
+Check `git status` and `git diff`, then suggest semantic commit messages in English (Conventional Commits), grouped by change type. List each proposed commit with the files it should include. Do not run `git commit`.

@@ -1,0 +1,1 @@
+Create semantic git commits in English. Inspect status/diff/log, group changes by logical type, and commit each group separately using Conventional Commits. Use `git add -p` when one file spans multiple concerns.
