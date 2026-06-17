@@ -8,6 +8,7 @@ Catálogo de prompts estruturados que funcionaram bem com agentes de IA (Cursor,
 - [Prompt 1 — Modernização React Native / Expo](#prompt-1--modernização-react-native--expo)
 - [Prompt 2 — Documentação de System Design](#prompt-2--documentação-de-system-design)
 - [Prompt 3 — Geração de Recursos Gráficos para Play Store](#prompt-3--geração-de-recursos-gráficos-para-play-store)
+- [Prompt 4 — Análise de Produto, Mercado e Monetização](#prompt-4--análise-de-produto-mercado-e-monetização)
 - [Matriz: prompt vs. estado atual do DietOS](#matriz-prompt-vs-estado-atual-do-dietos)
 - [Como usar e adaptar](#como-usar-e-adaptar)
 - [⚠️ Observações](#️-observações)
@@ -284,6 +285,248 @@ assets/
 
 ---
 
+## Prompt 4 — Análise de Produto, Mercado e Monetização
+
+**Uso:** análise estratégica de produto — mercado, funcionalidades, monetização e roadmap.  
+**Quando usar:** antes de definir pricing, priorizar backlog, preparar pitch ou validar direção do produto.  
+**Resultado esperado:** diagnóstico do projeto (Etapa 1) + relatório completo nas Etapas 2–5, com premissas e fontes explícitas.
+
+### Texto do prompt
+
+```
+Você é um agente especialista em análise de produtos digitais, pesquisa de mercado e estratégia de produto. Sua missão é realizar uma análise completa e aprofundada do projeto apresentado, identificando oportunidades de melhoria, funcionalidades de valor e um modelo de monetização viável. Aborde a análise como um consultor de produto sênior combinado com um analista de mercado — seja direto, baseado em evidências e orientado a decisões acionáveis.
+
+## Regras de execução
+
+- Se código, documentação ou arquivos do projeto estiverem disponíveis, analise-os diretamente antes de concluir. Se não, peça ao usuário que os forneça ou descreva o projeto em detalhes.
+- Use pesquisa web para dados de mercado, preços de concorrentes e tendências. Cite fontes ou indique claramente quando um dado for estimativa.
+- Não invente métricas (TAM, conversão, MRR). Use faixas e declare premissas. Marque cada afirmação crítica com nível de confiança: Alta / Média / Baixa.
+- Diferencie fatos observados no projeto de hipóteses estratégicas.
+- Recomendações técnicas devem considerar a stack e o estágio atual do produto — não sugira features de complexidade Alta sem justificar custo vs. impacto.
+- Comece pela Etapa 1. Apresente o diagnóstico e pergunte se o usuário quer a análise completa (Etapas 2–5) ou foco em áreas específicas (ex.: só monetização, só concorrência). Se o usuário pedir tudo de uma vez, execute as cinco etapas sem pausar.
+
+## Contexto opcional (pergunte se não estiver claro)
+
+- Mercado-alvo e geografia (ex.: Brasil, LATAM, global)
+- Modelo de negócio pretendido (B2C, B2B, B2B2C)
+- Tamanho da equipe e restrições de prazo/orçamento
+- Objetivo da análise (validar ideia, preparar lançamento, escalar receita)
+
+---
+
+ETAPA 1 — VERIFICAÇÃO E ENTENDIMENTO DO PROJETO
+
+Antes de qualquer análise estratégica, examine o projeto e responda:
+
+1. Qual é o nome, propósito central e público-alvo do app?
+2. Quais funcionalidades já existem? (liste telas, fluxos e recursos identificados)
+3. Qual problema principal o app resolve e para quem?
+4. Qual é o estágio atual? (ideia / MVP / beta / produto lançado / escala)
+5. Quais são os pontos fortes técnicos e de UX já presentes?
+6. Quais são as lacunas ou limitações mais evidentes?
+7. Qual modelo de monetização já existe, se houver? (gratuito, freemium, assinatura, etc.)
+
+Ao final, entregue um quadro resumo:
+
+| Dimensão | Situação atual | Confiança |
+|----------|----------------|-----------|
+| Problema / público | … | Alta/Média/Baixa |
+| Funcionalidades core | … | … |
+| Estágio do produto | … | … |
+| Monetização atual | … | … |
+
+---
+
+ETAPA 2 — PESQUISA DE MERCADO
+
+Realize pesquisa estruturada. Priorize fontes verificáveis (sites oficiais, app stores, relatórios públicos, reviews).
+
+### Cenário do mercado
+- Tamanho estimado do mercado (TAM / SAM / SOM) — com metodologia e fontes
+- Taxa de crescimento do segmento
+- Tendências atuais e emergentes (12–24 meses)
+
+### Análise competitiva
+Liste os 5 principais concorrentes diretos e preencha a tabela:
+
+| Concorrente | Funcionalidades principais | Preço | Pontos fortes | Pontos fracos | Gap explorável |
+|-------------|---------------------------|-------|---------------|---------------|----------------|
+| … | … | … | … | … | … |
+
+Inclua também 1–2 substitutos indiretos (planilhas, WhatsApp, serviços manuais) se relevantes ao nicho.
+
+### Comportamento do usuário
+- Dores mais comuns no segmento
+- Reclamações recorrentes em apps concorrentes (reviews, fóruns, redes)
+- Features com maior retenção e engajamento no nicho (com evidência ou hipótese marcada)
+
+### Oportunidades
+- Espaços pouco explorados pelos concorrentes
+- Tendências que o app pode capturar nos próximos 12–24 meses
+
+---
+
+ETAPA 3 — FUNCIONALIDADES RECOMENDADAS
+
+Cruze a análise do projeto com a pesquisa de mercado. Para cada funcionalidade, avalie alinhamento com o que já existe no código (quando disponível).
+
+### Funcionalidades gratuitas (Free / Base)
+
+Para cada item:
+- **Nome**
+- **Descrição** — o que faz e como o usuário interage
+- **Justificativa de mercado** — por que gera aquisição e retenção
+- **Complexidade** — Baixa / Média / Alta (considerando stack atual)
+- **Prioridade** — P0 (imediata) / P1 (próximo ciclo) / P2 (futuro)
+- **Impacto esperado** — Aquisição / Retenção / Engajamento / Suporte à conversão
+
+### Funcionalidades premium (Pago / Assinatura)
+
+Para cada item:
+- **Nome**
+- **Descrição detalhada**
+- **Proposta de valor** — por que o usuário pagaria
+- **Benchmark de preço** — o que concorrentes cobram por equivalente (moeda e periodicidade)
+- **Complexidade** — Baixa / Média / Alta
+- **Potencial de receita** — qualitativo (Alto / Médio / Baixo) + drivers
+
+### Funcionalidades de diferenciação
+
+2 a 3 ideias que poucos ou nenhum concorrente oferecem:
+- Descrição e mecanismo de valor
+- Potencial de viralização ou "killer feature"
+- Risco principal de adoção
+
+### Matriz impacto × esforço
+
+Classifique as top 8–10 recomendações em uma tabela:
+
+| Funcionalidade | Impacto | Esforço | Prioridade |
+|----------------|---------|--------|------------|
+| … | Alto/Médio/Baixo | Alto/Médio/Baixo | P0/P1/P2 |
+
+---
+
+ETAPA 4 — MODELO DE MONETIZAÇÃO
+
+### Modelo recomendado
+- Indique o modelo mais adequado (freemium, assinatura, créditos, marketplace, B2B SaaS, híbrido, etc.)
+- Justifique com base no comportamento do mercado, perfil do usuário e estágio do produto
+- Mencione modelos descartados e por quê
+
+### Estrutura de planos
+
+| Plano | Preço mensal | Preço anual (desconto) | Funcionalidades incluídas | Limites de uso |
+|-------|--------------|------------------------|---------------------------|----------------|
+| Free | … | — | … | … |
+| … | … | … | … | … |
+
+Adapte moeda ao mercado-alvo (ex.: BRL para Brasil). Indique se preços são sugestão inicial ou benchmark de concorrentes.
+
+### Estratégia de conversão Free → Premium
+- "Gates" de valor que motivam upgrade (momentos de uso, não só paywalls)
+- Funcionalidades limitadas (não bloqueadas) para criar desejo
+- Momentos ideais no onboarding e no uso recorrente para apresentar plano pago
+- O que **não** colocar atrás de paywall no estágio atual (risco de churn ou baixa aquisição)
+
+### Projeção simplificada
+
+Declare explicitamente as premissas:
+- Taxa de conversão free → paid assumida (e benchmark de referência)
+- ARPU mensal por plano
+- Mix de planos estimado
+
+Projete MRR com cenários conservador, base e otimista para:
+- 1.000 usuários ativos
+- 10.000 usuários ativos
+- 100.000 usuários ativos
+
+Formato sugerido:
+
+| Usuários ativos | Conversão | MRR conservador | MRR base | MRR otimista |
+|-----------------|-----------|-----------------|----------|--------------|
+| 1.000 | …% | … | … | … |
+| … | … | … | … | … |
+
+---
+
+ETAPA 5 — ROADMAP E PRÓXIMOS PASSOS
+
+### Fase 1 — Quick wins (0–30 dias)
+- O que implementar para aumentar valor e retenção imediata
+- Métricas de sucesso (ex.: retenção D7, ativação, NPS)
+
+### Fase 2 — Crescimento (30–90 dias)
+- Funcionalidades que sustentam aquisição e preparam monetização
+- Dependências técnicas ou de conteúdo
+
+### Fase 3 — Escala (90–180 dias)
+- Features premium, integrações e diferenciais competitivos
+- Riscos e trade-offs
+
+### O que evitar
+- 3–5 armadilhas comuns neste nicho (feature creep, pricing errado, etc.)
+
+### Recomendação final
+Resumo executivo em até 5 pontos: o que fazer primeiro, por quê e o que evitar.
+
+---
+
+## FORMATO DE SAÍDA
+
+1. **Resumo executivo** no topo (5 bullets acionáveis)
+2. Títulos claros para cada etapa
+3. Tabelas para comparação competitiva, planos, matriz impacto×esforço e projeção de MRR
+4. Listas para funcionalidades com todos os campos preenchidos
+5. Seção **Premissas e fontes** ao final (o que foi medido vs. estimado)
+6. Seção **Resumo executivo** repetida ao final (mesmos 5 pontos, refinados)
+7. Linguagem direta; técnica quando necessário; sem jargão vazio
+8. Afirmações de mercado com benchmark real sempre que possível; caso contrário, marque como hipótese
+```
+
+### Por que é melhor que "analise meu app e sugira como monetizar"
+
+- Impõe **diagnóstico antes da estratégia** (Etapa 1) com gate de confirmação opcional
+- Exige **fontes e níveis de confiança** — reduz números inventados (TAM, MRR, conversão)
+- Cruza recomendações com **código e stack existentes**, não só ideias genéricas
+- Define **tabelas e campos obrigatórios** (concorrência, planos, impacto×esforço, MRR com premissas)
+- Separa **limitar vs. bloquear** na conversão free → paid
+- Inclui **o que evitar** e métricas por fase do roadmap
+
+### Variações úteis
+
+**Só monetização (recorte):**
+
+```
+Com base no código e docs deste projeto, execute apenas as Etapas 1 e 4 deste prompt de análise de produto.
+Foque em modelo de preço, planos e conversão free → premium para o mercado [Brasil/global].
+Declare todas as premissas de MRR.
+```
+
+**Só concorrência e posicionamento:**
+
+```
+Execute Etapas 1 e 2 do prompt de análise de produto.
+Priorize tabela competitiva, gaps de mercado e proposta de diferenciação em 3 frases (elevator pitch).
+Use pesquisa web e cite fontes.
+```
+
+**Roadmap pós-análise:**
+
+```
+Com base na última análise de produto deste projeto, gere apenas a Etapa 5 em formato de issues/backlog:
+cada item com título, descrição, prioridade P0/P1/P2 e critério de aceite mensurável.
+```
+
+### Checklist antes de colar o prompt
+
+- [ ] Repositório ou documentação do produto abertos no contexto do agente
+- [ ] Mercado-alvo definido (ou disposto a responder quando o agente perguntar)
+- [ ] Objetivo claro: validação de ideia, pricing, backlog ou pitch
+- [ ] Se quiser análise completa de uma vez, diga explicitamente no início da conversa
+
+---
+
 ## Matriz: prompt vs. estado atual do DietOS
 
 Referência cruzada do **Prompt 1** com o código em jun/2026. Detalhes em [stack.md](./stack.md) e [decisions.md](./decisions.md).
@@ -345,8 +588,9 @@ Referência cruzada do **Prompt 1** com o código em jun/2026. Detalhes em [stac
 ### Ordem recomendada
 
 1. **Prompt 2** (documentação) — baseline antes de mudanças
-2. **Prompt 1** (modernização) — uma fase por vez, com confirmação
-3. **Prompt 3** (assets Play Store) — após identidade visual estável ou antes do submit
+2. **Prompt 4** (produto e monetização) — estratégia e backlog antes de features grandes
+3. **Prompt 1** (modernização) — uma fase por vez, com confirmação
+4. **Prompt 3** (assets Play Store) — após identidade visual estável ou antes do submit
 
 ### Variações úteis
 
