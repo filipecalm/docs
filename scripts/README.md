@@ -10,6 +10,7 @@ Espelho dos scripts de automação do repositório [DietOS](../DietOS). Os arqui
 - [Shell (bash)](#shell-bash)
 - [CMD (wrappers Windows)](#cmd-wrappers-windows)
 - [Functions (CLI backend)](#functions-cli-backend)
+- [VS Code Tasks](#vs-code-tasks)
 - [Observações](#observações)
 
 ---
@@ -175,6 +176,26 @@ Wrapper fino que delega para `functions/scripts/verify-user.cjs`.
 Instala Watchman no Windows (file watcher para Metro/Expo).
 
 **Deps:** Chocolatey ou download manual.
+
+---
+
+### `kill-metro-port.ps1`
+
+Encerra processos `node` que estão escutando na porta do Metro (default `8081`).
+
+| Parâmetro | Default |
+|-----------|---------|
+| `-Port` | `8081` |
+
+**Passos:** `Get-NetTCPConnection` na porta → filtra PIDs → `Stop-Process` só em `node` → verifica se a porta liberou.
+
+**Uso direto:** `powershell -ExecutionPolicy Bypass -File scripts/kill-metro-port.ps1`
+
+**Task VS Code:** `Kill Metro (porta 8081)` em `.vscode/tasks.json`.
+
+**Projetos com esta task:** cronometro, finances (padrão replicável para qualquer app Expo).
+
+**Deps:** Windows, PowerShell com cmdlet `Get-NetTCPConnection`.
 
 ---
 
@@ -356,6 +377,20 @@ Importa JSON de dieta para documento Firestore de um paciente.
 **Uso:** `node functions/scripts/apply-diet-json-to-firestore.cjs`
 
 **Deps:** service-account, JSON de dieta válido.
+
+---
+
+## VS Code Tasks
+
+Arquivo `.vscode/tasks.json` na raiz do projeto Expo. Espelho de referência em [`../.vscode/tasks.json`](../.vscode/tasks.json).
+
+| Label | Script | Descrição |
+|-------|--------|-----------|
+| `Kill Metro (porta 8081)` | `scripts/kill-metro-port.ps1` | Mata Metro/Expo preso na porta 8081 |
+
+**Rodar:** `Ctrl+Shift+P` → `Tasks: Run Task` → `Kill Metro (porta 8081)`.
+
+Origem do padrão: repositório **cronometro**; adotado em **finances** e documentado aqui para replicação nos demais apps Expo.
 
 ---
 

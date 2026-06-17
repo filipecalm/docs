@@ -12,6 +12,7 @@
 - [Scripts Node/MJS (scripts/)](#scripts-nodemjs-scripts)
 - [Scripts Shell (scripts/)](#scripts-shell-scripts)
 - [Scripts CLI — functions/scripts/](#scripts-cli--functionsscripts)
+- [VS Code Tasks (.vscode/tasks.json)](#vs-code-tasks-vscodetasksjson)
 - [⚠️ Observações](#️-observações)
 
 ---
@@ -228,6 +229,57 @@
 |------|---------|
 | **Comando** | Instala Watchman no Windows (file watcher para Metro) |
 | **Deps** | Chocolatey ou download manual |
+
+### `kill-metro-port.ps1`
+
+| Item | Detalhe |
+|------|---------|
+| **Comando** | `powershell -ExecutionPolicy Bypass -File scripts/kill-metro-port.ps1 [-Port 8081]` |
+| **Passos** | Lista conexões TCP na porta → mata apenas processos `node` (Metro) → confirma que a porta ficou livre |
+| **Deps** | Windows, PowerShell 5+ (`Get-NetTCPConnection`) |
+| **Exemplo** | Task VS Code **Kill Metro (porta 8081)** ou `powershell -File scripts/kill-metro-port.ps1` |
+| **Projetos** | cronometro, finances |
+
+Libera a porta padrão do Metro/Expo (`8081`) quando um `node` antigo ficou preso após crash ou `Ctrl+C` incompleto. Ignora outros processos na mesma porta (Docker, etc.).
+
+---
+
+## VS Code Tasks (.vscode/tasks.json)
+
+Tasks reutilizáveis para desenvolvimento Expo no Windows. Copiar `.vscode/tasks.json` + `scripts/kill-metro-port.ps1` para a raiz do projeto.
+
+| Task | Script | Quando usar |
+|------|--------|-------------|
+| **Kill Metro (porta 8081)** | `scripts/kill-metro-port.ps1` | `pnpm start` falha com porta ocupada; antes de subir Metro de novo |
+
+**Como rodar:** `Terminal` → `Run Task...` → `Kill Metro (porta 8081)` (ou atalho `Ctrl+Shift+P` → `Tasks: Run Task`).
+
+**`.vscode/tasks.json` (referência):**
+
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Kill Metro (porta 8081)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/scripts/kill-metro-port.ps1"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
+```
 
 ### `Write-FirebaseSecretFile.ps1`
 
