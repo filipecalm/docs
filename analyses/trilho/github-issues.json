@@ -8,7 +8,7 @@
       "feature",
       "core"
     ],
-    "body": "## Descrição\nO tipo `Transaction` já tem `category?`, mas o fluxo de registro e as telas de histórico não usam. Implementar seleção de categoria ao incluir movimentação e filtro por categoria em Home e Movimentações Financeiras.\n\n**Doc:** [TRILHO-001](https://github.com/filipecalm/DietOS-docs/blob/main/analyses/trilho/backlog.md)\n\n## Critérios de aceite\n- [ ] Usuário escolhe categoria ao registrar receita/despesa (mín. 8 categorias padrão + \"Outros\")\n- [ ] Categoria salva no Firestore junto com o lançamento\n- [ ] Histórico mensal exibe categoria em cada item\n- [ ] Filtro por categoria funciona na tela de movimentações\n- [ ] ≥ 70% dos novos lançamentos têm categoria (medir via Analytics após 7 dias)",
+    "body": "## Descrição\nO tipo `Transaction` já tem `category?`, mas o fluxo de registro e as telas de histórico não usam. Implementar seleção de categoria ao incluir movimentação e filtro por categoria em Home e Movimentações Financeiras.\n\n**Doc:** [TRILHO-001](https://github.com/filipecalm/docs/blob/main/analyses/trilho/backlog.md)\n\n## Critérios de aceite\n- [ ] Usuário escolhe categoria ao registrar receita/despesa (mín. 8 categorias padrão + \"Outros\")\n- [ ] Categoria salva no Firestore junto com o lançamento\n- [ ] Histórico mensal exibe categoria em cada item\n- [ ] Filtro por categoria funciona na tela de movimentações\n- [ ] ≥ 70% dos novos lançamentos têm categoria (medir via Analytics após 7 dias)",
     "number": 8,
     "url": "https://github.com/filipecalm/trillho/issues/8"
   },

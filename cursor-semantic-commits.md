@@ -36,7 +36,7 @@ Substitua `%USERPROFILE%` pelo seu usuário (ex.: `C:\Users\filip`).
 ### 1. Skills (todos os projetos)
 
 ```powershell
-$src = "D:\Projetos\DietOS-docs\cursor\skills"
+$src = "D:\Projetos\docs\cursor\skills"
 $dst = "$env:USERPROFILE\.cursor\skills"
 New-Item -ItemType Directory -Force -Path $dst | Out-Null
 Copy-Item -Recurse -Force "$src\*" $dst
@@ -45,7 +45,7 @@ Copy-Item -Recurse -Force "$src\*" $dst
 ### 2. Slash commands (opcional)
 
 ```powershell
-$src = "D:\Projetos\DietOS-docs\cursor\commands"
+$src = "D:\Projetos\docs\cursor\commands"
 $dst = "$env:USERPROFILE\.cursor\commands"
 New-Item -ItemType Directory -Force -Path $dst | Out-Null
 Copy-Item -Force "$src\*" $dst
@@ -96,7 +96,7 @@ Para o mesmo comportamento em um único repo (sem instalar globalmente), copie o
 ## Atualizar após mudanças neste repo
 
 ```powershell
-git -C D:\Projetos\DietOS-docs pull
+git -C D:\Projetos\docs pull
 # repetir os comandos de cópia da seção Instalação
 # revisar User Rules se o texto em cursor/user-rules/ mudou
 ```

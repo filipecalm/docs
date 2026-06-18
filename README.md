@@ -1,6 +1,8 @@
-# DietOS — Documentação Técnica
+# docs — Documentação Técnica
 
-Documentação de System Design gerada a partir do código-fonte do repositório [DietOS](../DietOS).
+Repositório central de documentação de System Design, prompts e análises de produto dos projetos em `Projetos/`.
+
+Documentação inicial gerada a partir do [DietOS](../DietOS); inclui também análises de outros apps (ex.: [Trilho](./analyses/trilho/)).
 
 ## Visão geral
 
@@ -42,7 +44,7 @@ DietOS/
 ├── utils/               # Utilitários (i18n, rotas, PDF, etc.)
 ├── constants/           # Tokens de cor
 ├── styles/              # StyleSheets compartilhados (parcial)
-├── scripts/             # Automação de build, deploy e secrets (espelhado em DietOS-docs/scripts/)
+├── scripts/             # Automação de build, deploy e secrets (espelhado em docs/scripts/)
 ├── functions/           # Firebase Cloud Functions (Express API)
 ├── tests/               # Testes de regras Firestore/Storage
 ├── hosting/             # Site estático (dietos.com.br)
@@ -52,7 +54,7 @@ DietOS/
 
 ## Documentação operacional existente
 
-O repositório já contém guias em `DietOS/docs/` (Firebase, Stripe, Play Store, pentest, desenvolvimento). Esta pasta (`DietOS-docs`) complementa com visão arquitetural e de engenharia.
+O repositório já contém guias em `DietOS/docs/` (Firebase, Stripe, Play Store, pentest, desenvolvimento). Este repositório (`docs`) complementa com visão arquitetural e de engenharia.
 
 ## ⚠️ Observações
 

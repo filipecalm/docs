@@ -244,7 +244,7 @@ cada item com título, descrição, prioridade P0/P1/P2 e critério de aceite me
 
 ## Onde salvar o entregável
 
-Após concluir a análise, documentar em `dietOs-docs/analyses/[nome-do-projeto]/`:
+Após concluir a análise, documentar em `docs/analyses/[nome-do-projeto]/`:
 
 - `product-analysis.md` — relatório completo (Etapas 1–5)
 - `backlog.md` — opcional, Etapa 5 em formato de issues

@@ -105,7 +105,7 @@ Comece fazendo um diagnóstico do estado atual do projeto (versões instaladas, 
 
 **Uso:** gerar documentação técnica completa sem alterar código.  
 **Quando usar:** onboarding de devs, pré-refactor, ou antes do Prompt 1.  
-**Resultado esperado:** pasta `Projetos/DietOS-docs/` com 7 arquivos Markdown (já gerada neste repositório).
+**Resultado esperado:** pasta `Projetos/docs/` com 7 arquivos Markdown (já gerada neste repositório).
 
 ### Texto do prompt
 
@@ -626,7 +626,7 @@ Diagnóstico das telas mais críticas primeiro. Aguarde confirmação da lib esc
 **Atualizar docs após refactor:**
 
 ```
-Releia o repositório DietOS e atualize apenas os arquivos em DietOS-docs/ que mudaram
+Releia o repositório DietOS e atualize apenas os arquivos em docs/ que mudaram
 (stack.md, system-design.md, patterns.md). Não altere código do app.
 ```
 
@@ -641,7 +641,7 @@ Releia o repositório DietOS e atualize apenas os arquivos em DietOS-docs/ que m
 
 ## ⚠️ Observações
 
-- Prompts são **templates** — ajuste nomes de pasta (`DietOS-docs`) e fases conforme o momento do projeto.
+- Prompts são **templates** — ajuste nomes de pasta (`docs`) e fases conforme o momento do projeto.
 - O Prompt 1 assume greenfield de modernização; no DietOS vários itens já estão feitos — o diagnóstico evita retrabalho (ex.: migrar Router que já existe).
 - Documentação (Prompt 2) deve ser **reexecutada** após modernizações grandes para não divergir do código.
 - Não commitar secrets nem pedir ao agente para commitar sem instrução explícita.
