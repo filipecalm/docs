@@ -2,6 +2,8 @@
 
 Catálogo de prompts estruturados que funcionaram bem com agentes de IA (Cursor, Claude, etc.) no contexto do DietOS. Cada prompt segue o padrão **diagnosticar → planejar → aguardar confirmação → executar**, evitando mudanças aleatórias no código.
 
+> **Versões genéricas** (qualquer projeto, sem assumir DietOS ou nicho de saúde): pasta [prompts-generic/](./prompts-generic/README.md).
+
 ## Sumário
 
 - [Por que esses prompts funcionam](#por-que-esses-prompts-funcionam)
@@ -9,6 +11,7 @@ Catálogo de prompts estruturados que funcionaram bem com agentes de IA (Cursor,
 - [Prompt 2 — Documentação de System Design](#prompt-2--documentação-de-system-design)
 - [Prompt 3 — Geração de Recursos Gráficos para Play Store](#prompt-3--geração-de-recursos-gráficos-para-play-store)
 - [Prompt 4 — Análise de Produto, Mercado e Monetização](#prompt-4--análise-de-produto-mercado-e-monetização)
+- [Artefatos gerados (Prompt 4)](#artefatos-gerados-prompt-4)
 - [Matriz: prompt vs. estado atual do DietOS](#matriz-prompt-vs-estado-atual-do-dietos)
 - [Como usar e adaptar](#como-usar-e-adaptar)
 - [⚠️ Observações](#️-observações)
@@ -524,6 +527,16 @@ cada item com título, descrição, prioridade P0/P1/P2 e critério de aceite me
 - [ ] Mercado-alvo definido (ou disposto a responder quando o agente perguntar)
 - [ ] Objetivo claro: validação de ideia, pricing, backlog ou pitch
 - [ ] Se quiser análise completa de uma vez, diga explicitamente no início da conversa
+
+### Artefatos gerados (Prompt 4)
+
+Versão genérica do prompt (qualquer nicho): [prompts-generic/prompt-04-analise-produto.md](./prompts-generic/prompt-04-analise-produto.md).
+
+| Projeto | Nicho | Data | Documentos |
+|---------|-------|------|------------|
+| **Trilho** | Finanças pessoais (B2C BR) | 2026-06-18 | [Índice](./analyses/trilho/README.md) · [Análise](./analyses/trilho/product-analysis.md) · [Backlog](./analyses/trilho/backlog.md) |
+
+Ao concluir uma nova análise, salvar em `analyses/[projeto]/` e registrar nesta tabela.
 
 ---
 
