@@ -1,8 +1,8 @@
 # Prompts YouTube — curados de `tops`
 
-> **Tipo:** Conteúdo e redes sociais · **Índice geral:** [por-tipo.md](./por-tipo.md#conteúdo-e-redes-sociais)
+> **Tipo:** Conteúdo e redes sociais · **Índice geral:** [por-tipo.md](../por-tipo.md#conteúdo-e-redes-sociais)
 
-10 prompts extraídos de screenshots em `C:\Users\filip\Desktop\Filipe\tops`. Versões reutilizáveis com placeholders padronizados em [templates/](./templates/).
+10 prompts extraídos de screenshots em `C:\Users\filip\Desktop\Filipe\tops`. Versões reutilizáveis com placeholders nesta pasta.
 
 ## Sumário
 
@@ -21,9 +21,9 @@
 
 | Cenário | Caminho |
 |---------|---------|
-| Um vídeo do zero (canal sem rosto) | Workflow 5 passos → ou [template workflow](./templates/prompt-youtube-workflow-sem-rosto.md) |
+| Um vídeo do zero (canal sem rosto) | Workflow 5 passos → ou [workflow-sem-rosto.md](./workflow-sem-rosto.md) |
 | Só títulos + roteiro estilo sarcástico | Títulos → Roteiro magnético |
-| Tudo de uma vez (título, thumb, roteiro, SEO) | [Pacote completo](./templates/prompt-youtube-pacote-completo.md) |
+| Tudo de uma vez (título, thumb, roteiro, SEO) | [pacote-completo.md](./pacote-completo.md) |
 | Brainstorm de ideias | Ideias virais |
 
 ---
@@ -31,7 +31,7 @@
 ## 1. Ideias virais
 
 **Fonte:** `Screenshot_20260126-203607.png`  
-**Template:** [prompt-youtube-ideias-virais.md](./templates/prompt-youtube-ideias-virais.md)
+**Template:** [ideias-virais.md](./ideias-virais.md)
 
 ```
 Atue como um estrategista de crescimento no YouTube com mais de 15 anos de experiência ajudando criadores a escalar canais no nicho/segmento [NICHO]. Sua missão é criar 20 ideias de vídeos com alto potencial de viralização, combinando gatilhos emocionais, curiosidade e otimização para o algoritmo. As ideias devem ser pensadas para capturar atenção rapidamente e manter alto interesse do público-alvo [PUBLICO_ALVO].
@@ -42,7 +42,7 @@ Atue como um estrategista de crescimento no YouTube com mais de 15 anos de exper
 ## Workflow canal sem rosto (5 passos)
 
 **Fonte:** `Screenshot_20260126-221213.png`  
-**Template unificado:** [prompt-youtube-workflow-sem-rosto.md](./templates/prompt-youtube-workflow-sem-rosto.md)
+**Template unificado:** [workflow-sem-rosto.md](./workflow-sem-rosto.md)
 
 Execute em sequência, passando a saída de cada etapa para a próxima.
 
@@ -81,7 +81,7 @@ Quebre cada parágrafo em imagens para Canva — o que deveria aparecer na tela,
 ## Títulos impossíveis de ignorar
 
 **Fonte:** `Screenshot_20260225-133304.png`  
-**Template:** [prompt-youtube-titulos-virais.md](./templates/prompt-youtube-titulos-virais.md)
+**Template:** [titulos-virais.md](./titulos-virais.md)
 
 ```
 Quero que você atue como um criador de títulos virais para YouTube no nicho de [NICHO], no estilo do canal [CANAL_REFERENCIA].
@@ -99,7 +99,7 @@ Siga estas orientações:
 ## Roteiro magneticamente envolvente
 
 **Fonte:** `Screenshot_20260225-133309.png` (screenshot truncado — template completa o restante)  
-**Template:** [prompt-youtube-roteiro-magnetico.md](./templates/prompt-youtube-roteiro-magnetico.md)
+**Template:** [roteiro-magnetico.md](./roteiro-magnetico.md)
 
 Texto original visível no screenshot:
 
@@ -120,7 +120,7 @@ Estrutura narrativa:
 ## Pacote completo (equipe virtual)
 
 **Fonte:** `Screenshot_20260405-191024.png`  
-**Template:** [prompt-youtube-pacote-completo.md](./templates/prompt-youtube-pacote-completo.md)
+**Template:** [pacote-completo.md](./pacote-completo.md)
 
 ```
 You are my full YouTube team: strategist, creative director, scriptwriter, SEO expert, and thumbnail designer.
@@ -159,8 +159,8 @@ Pasta: `C:\Users\filip\Desktop\Filipe\tops`
 
 | Template | Uso |
 |----------|-----|
-| [prompt-youtube-pacote-completo.md](./templates/prompt-youtube-pacote-completo.md) | Um vídeo completo (título, thumb, roteiro, SEO) |
-| [prompt-youtube-workflow-sem-rosto.md](./templates/prompt-youtube-workflow-sem-rosto.md) | Pipeline inteiro canal sem rosto |
-| [prompt-youtube-ideias-virais.md](./templates/prompt-youtube-ideias-virais.md) | Brainstorm de 20 ideias |
-| [prompt-youtube-titulos-virais.md](./templates/prompt-youtube-titulos-virais.md) | Títulos estilo clickbait |
-| [prompt-youtube-roteiro-magnetico.md](./templates/prompt-youtube-roteiro-magnetico.md) | Roteiro sarcástico/irônico |
+| [pacote-completo.md](./pacote-completo.md) | Um vídeo completo (título, thumb, roteiro, SEO) |
+| [workflow-sem-rosto.md](./workflow-sem-rosto.md) | Pipeline inteiro canal sem rosto |
+| [ideias-virais.md](./ideias-virais.md) | Brainstorm de 20 ideias |
+| [titulos-virais.md](./titulos-virais.md) | Títulos estilo clickbait |
+| [roteiro-magnetico.md](./roteiro-magnetico.md) | Roteiro sarcástico/irônico |

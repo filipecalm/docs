@@ -2,20 +2,20 @@
 
 Prompts extraídos de `C:\Users\filip\Pictures\Pictures\Screenshots` (997 imagens), **agrupados por tipo**.
 
-> **Índice geral por tipo:** [por-tipo.md](./por-tipo.md)  
-> **Tutoriais / roadmaps / desafios (2022–2024):** [from-screenshots-legacy.md](./from-screenshots-legacy.md)  
+> **Índice geral por tipo:** [por-tipo.md](../por-tipo.md)  
+> **Tutoriais / roadmaps / desafios (2022–2024):** [legado/tutoriais-roadmaps.md](../legado/tutoriais-roadmaps.md)  
 > **Overlap Salvas:** [from-salvas.md](./from-salvas.md)
 
 ## Resumo por tipo
 
 | Tipo | Qtd. | Template |
 |------|------|----------|
-| Conteúdo e redes sociais | 8 | [prompt-instagram-crescimento](./templates/prompt-instagram-crescimento.md) |
-| Produto digital | 2 | — |
-| Carreira e emprego | 2 | — |
-| Aprendizado | 1 | — |
-| Desenvolvimento | 1 | [prompt-co-fundador-tecnico](./templates/prompt-co-fundador-tecnico.md) |
-| Comportamento do agente | 5 instruções | [prompt-pensamento-critico](./templates/prompt-pensamento-critico.md) |
+| Conteúdo e redes sociais | 8 | [instagram/crescimento-faceless.md](../instagram/crescimento-faceless.md) |
+| Produto digital | 2 | [produto-digital/](../produto-digital/) |
+| Carreira e emprego | 2 | [carreira/](../carreira/) |
+| Aprendizado | 1 | [aprendizado/](../aprendizado/) |
+| Desenvolvimento | 1 | [desenvolvimento/co-fundador-tecnico.md](../desenvolvimento/co-fundador-tecnico.md) |
+| Comportamento do agente | 5 instruções | [comportamento-agente/pensamento-critico.md](../comportamento-agente/pensamento-critico.md) |
 
 ---
 
@@ -24,7 +24,7 @@ Prompts extraídos de `C:\Users\filip\Pictures\Pictures\Screenshots` (997 imagen
 ### Instagram — @euthayboss (7)
 
 **Imagens:** `Screenshot_20260204-192000.png` … `192033.png`  
-**Template:** [prompt-instagram-crescimento.md](./templates/prompt-instagram-crescimento.md)
+**Template:** [instagram/crescimento-faceless.md](../instagram/crescimento-faceless.md)
 
 ```
 1. Liste 10 nichos de produtos digitais com baixa concorrência, alta demanda e potencial de renda passiva.
@@ -119,7 +119,7 @@ Given our previous interactions, what is 1 thing you think I hide from my commun
 
 ### Técnica Feynman
 
-**Imagem:** `Screenshot_20230511-062848.png` · também em [from-screenshots-legacy.md](./from-screenshots-legacy.md)
+**Imagem:** `Screenshot_20230511-062848.png` · também em [legado/tutoriais-roadmaps.md](../legado/tutoriais-roadmaps.md)
 
 ```
 Explique [TÓPICO OU HABILIDADE] da forma mais simplificada possível como se estivesse ensinando a um iniciante completo.
@@ -132,7 +132,7 @@ Explique [TÓPICO OU HABILIDADE] da forma mais simplificada possível como se es
 ### Co-Fundador Técnico — vibe coding
 
 **Fonte:** Miles Deutscher (AIEDGE) · Alexandre Messina · `Screenshot_20260211-184524.png`  
-**Template:** [prompt-co-fundador-tecnico.md](./templates/prompt-co-fundador-tecnico.md)
+**Template:** [desenvolvimento/co-fundador-tecnico.md](../desenvolvimento/co-fundador-tecnico.md)
 
 Prompt em 5 fases (Descoberta → Entrega) com papel de co-fundador técnico. Texto completo no template.
 
@@ -143,7 +143,7 @@ Prompt em 5 fases (Descoberta → Entrega) com papel de co-fundador técnico. Te
 ### Pensamento crítico — Leo Candido
 
 **Imagem:** `Screenshot_20250425-134623.png`  
-**Template:** [prompt-pensamento-critico.md](./templates/prompt-pensamento-critico.md)
+**Template:** [comportamento-agente/pensamento-critico.md](../comportamento-agente/pensamento-critico.md)
 
 1. Analise minhas suposições. O que estou tomando como verdade que pode não ser?
 2. Apresente contrapontos. O que um cético bem informado diria em resposta?
@@ -160,7 +160,7 @@ Prompt em 5 fases (Descoberta → Entrega) com papel de co-fundador técnico. Te
 | `Screenshot_20241209-082125.png` | Carreira — emprego remoto (6) | [from-salvas.md](./from-salvas.md) |
 | `Screenshot_20250201-072146.png` | Aprendizado — DeepSeek (7) | [from-salvas.md](./from-salvas.md) |
 | `Screenshot_20250212-170022.png` | Comportamento — reflexão | [from-salvas.md](./from-salvas.md) |
-| `Screenshot_20231122-133829.png` | Imagem — DALL-E | [from-screenshots-legacy.md](./from-screenshots-legacy.md) |
+| `Screenshot_20231122-133829.png` | Imagem — DALL-E | [legado/tutoriais-roadmaps.md](../legado/tutoriais-roadmaps.md) |
 
 ---
 
@@ -168,7 +168,7 @@ Prompt em 5 fases (Descoberta → Entrega) com papel de co-fundador técnico. Te
 
 | Faixa | Prompts | Tutoriais / roadmaps |
 |-------|---------|----------------------|
-| 2025–2026 | 14 imagens | [legado](./from-screenshots-legacy.md) |
+| 2025–2026 | 14 imagens | [legado](../legado/) |
 | 2022–2024 | 2 (+ Feynman) | 38 itens |
 
-Ver [por-tipo.md](./por-tipo.md) para o catálogo completo incluindo `Salvas` e `tops`.
+Ver [por-tipo.md](../por-tipo.md) para o catálogo completo.

@@ -1,6 +1,6 @@
 # Prompts curados — pasta `tops`
 
-> **Índice por tipo:** [por-tipo.md](./por-tipo.md)
+> **Índice por tipo:** [por-tipo.md](../por-tipo.md)
 
 Catálogo de prompts de IA extraídos de screenshots em `C:\Users\filip\Desktop\Filipe\tops` (38 imagens, jun/2026).
 
@@ -8,12 +8,12 @@ Catálogo de prompts de IA extraídos de screenshots em `C:\Users\filip\Desktop\
 
 | Tipo | Qtd. | Onde |
 |------|------|------|
-| Finanças pessoais | 2 | Abaixo · [template](./templates/prompt-financas-pessoais.md) |
-| Aprendizado e produtividade | 6 | Abaixo · [template](./templates/prompt-aprendizado-produtividade.md) |
-| Desenvolvimento — segurança | 1 | Abaixo · [template](./templates/prompt-auditoria-seguranca.md) |
-| Concurso | 1 | Abaixo · [template](./templates/prompt-cesgranrio-bb.md) |
-| Conteúdo — YouTube | 10 | [youtube.md](./youtube.md) |
-| Imagem IA | 1 | Abaixo · [template](./templates/prompt-melhoria-imagem.md) |
+| Conteúdo — YouTube | 10 | [youtube/](../youtube/) |
+| Finanças pessoais | 2 | [financas/](../financas/) |
+| Aprendizado e estudo | 6 | [aprendizado/](../aprendizado/) |
+| Desenvolvimento e engenharia | 1 | [desenvolvimento/](../desenvolvimento/) |
+| Concurso e certificação | 1 | [concurso/](../concurso/) |
+| Imagem (IA generativa) | 1 | [imagem/](../imagem/) |
 | **Total** | **21** | **12 imagens com prompt** |
 
 As outras 26 imagens não contêm prompts de IA. Ver [Inventário completo](#inventário-completo-das-imagens).
@@ -22,7 +22,7 @@ As outras 26 imagens não contêm prompts de IA. Ver [Inventário completo](#inv
 
 ## Finanças pessoais
 
-**Fonte:** `Screenshot_20260109-214739.png` · **Template:** [prompt-financas-pessoais.md](./templates/prompt-financas-pessoais.md)
+**Fonte:** `Screenshot_20260109-214739.png` · **Template:** [financas/orcamento-e-cortes.md](../financas/orcamento-e-cortes.md)
 
 ### Orçamento claro
 
@@ -38,9 +38,11 @@ Com base nessas despesas, em quais categorias estou gastando demais e como posso
 
 ---
 
-## Aprendizado e produtividade
+## Aprendizado e estudo
 
-**Fonte:** `Screenshot_20260116-170111.png`, `170116.png`, `170119.png` · **Template:** [prompt-aprendizado-produtividade.md](./templates/prompt-aprendizado-produtividade.md)
+### Produtividade e domínio de tópicos
+
+**Fonte:** `Screenshot_20260116-170111.png`, `170116.png`, `170119.png` · **Template:** [aprendizado/produtividade.md](../aprendizado/produtividade.md)
 
 1. **Entender como gênio** — `[tópico]` com analogias, contraexemplos e quiz especialista  
 2. **Dominar habilidade grátis** — plano dia a dia com `[habilidade]`  
@@ -49,13 +51,15 @@ Com base nessas despesas, em quais categorias estou gastando demais e como posso
 5. **Nível doutorado** — fundamentos, teorias, artigos/livros para `[tópico]`  
 6. **Modelos mentais** — framework de decisão para `[habilidade/tópico]`
 
-Texto completo de cada um no [template](./templates/prompt-aprendizado-produtividade.md).
+Texto completo de cada um no [template](../aprendizado/produtividade.md).
 
 ---
 
-## Segurança — auditoria estilo hacker
+## Desenvolvimento e engenharia
 
-**Fonte:** `Screenshot_20260103-213241.png` · **Template:** [prompt-auditoria-seguranca.md](./templates/prompt-auditoria-seguranca.md)
+### Segurança — auditoria estilo hacker
+
+**Fonte:** `Screenshot_20260103-213241.png` · **Template:** [desenvolvimento/auditoria-seguranca.md](../desenvolvimento/auditoria-seguranca.md)
 
 ```
 Aja como um hacker e me diga passo a passo o que você tentaria fazer no meu site para explorar falhas de segurança, extrair dados ou até derrubar o site. Para cada tentativa, diga se o meu site estaria protegido ou não.
@@ -63,19 +67,29 @@ Aja como um hacker e me diga passo a passo o que você tentaria fazer no meu sit
 
 ---
 
-## Concurso — Banco do Brasil (CESGRANRIO)
+## Concurso e certificação
 
-**Fonte:** `Screenshot_20260121-225759.png` · **Template:** [prompt-cesgranrio-bb.md](./templates/prompt-cesgranrio-bb.md)
+### Banco do Brasil (CESGRANRIO)
+
+**Fonte:** `Screenshot_20260121-225759.png` · **Template:** [concurso/cesgranrio-bb.md](../concurso/cesgranrio-bb.md)
 
 Prompt completo no template (contexto CESGRANRIO, 5 questões, gabarito comentado, tema `[TEMA]`).
 
 ---
 
-## Geração e melhoria de imagem
+## Imagem (IA generativa)
 
-**Fonte:** `Screenshot_20260209-174915.png` · **Template:** [prompt-melhoria-imagem.md](./templates/prompt-melhoria-imagem.md)
+### Upscale fotorrealista
+
+**Fonte:** `Screenshot_20260209-174915.png` · **Template:** [imagem/melhoria-imagem.md](../imagem/melhoria-imagem.md)
 
 Prompt de upscale fotorrealista preservando identidade — texto completo no template.
+
+---
+
+## Conteúdo e redes sociais — YouTube
+
+10 prompts em [youtube/](../youtube/) (ideias virais, workflow sem rosto, títulos, roteiro, pacote completo).
 
 ---
 
@@ -98,8 +112,8 @@ Prompt de upscale fotorrealista preservando identidade — texto completo no tem
 | `Screenshot_20260121-225759.png` | **Sim** | Prompt CESGRANRIO BB |
 | `Screenshot_20260125-004848.png` | Não | Tutorial OSINT |
 | `Screenshot_20260125-134206.png` | Não | Comentários Instagram |
-| `Screenshot_20260126-203607.png` | **Sim** | → [youtube.md](./youtube.md) |
-| `Screenshot_20260126-221213.png` | **Sim** | → [youtube.md](./youtube.md) |
+| `Screenshot_20260126-203607.png` | **Sim** | → [youtube/](../youtube/) |
+| `Screenshot_20260126-221213.png` | **Sim** | → [youtube/](../youtube/) |
 | `Screenshot_20260127-135455.png` | Não | Tutorial imagem (prompt prometido depois) |
 | `Screenshot_20260128-131455.png` | Não | Reels — material de senadores |
 | `Screenshot_20260128-183158.png` | Não | Story concurso BB (informativo) |
@@ -115,16 +129,16 @@ Prompt de upscale fotorrealista preservando identidade — texto completo no tem
 | `Screenshot_20260212-204735.png` | Não | Dicas RPM (não é prompt) |
 | `Screenshot_20260216-122539.png` | Não | UI Pix |
 | `Screenshot_20260224-222809.png` | Não | Edital FAPEMA |
-| `Screenshot_20260225-133304.png` | **Sim** | → [youtube.md](./youtube.md) |
-| `Screenshot_20260225-133309.png` | **Sim** | → [youtube.md](./youtube.md) |
+| `Screenshot_20260225-133304.png` | **Sim** | → [youtube/](../youtube/) |
+| `Screenshot_20260225-133309.png` | **Sim** | → [youtube/](../youtube/) |
 | `Screenshot_20260305-004832.png` | Não | UI parcelamento |
 | `Screenshot_20260318-091458.png` | Não | Comentários Instagram |
 | `Screenshot_20260324-201113.png` | Não | Estratégia conteúdo circular |
-| `Screenshot_20260405-191024.png` | **Sim** | → [youtube.md](./youtube.md) |
+| `Screenshot_20260405-191024.png` | **Sim** | → [youtube/](../youtube/) |
 
 ---
 
 ## Observações
 
-- Prompts de engenharia de software: [prompts.md](../prompts.md) e [prompts-generic/](../prompts-generic/)
-- Roteiro magnético (YouTube): screenshot truncado — template completa em [prompt-youtube-roteiro-magnetico.md](./templates/prompt-youtube-roteiro-magnetico.md)
+- Prompts de engenharia de software: [prompts.md](../../prompts.md) e [prompts-generic/](../../prompts-generic/)
+- Roteiro magnético (YouTube): screenshot truncado — template completa em [youtube/roteiro-magnetico.md](../youtube/roteiro-magnetico.md)

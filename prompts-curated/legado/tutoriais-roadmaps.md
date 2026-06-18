@@ -1,6 +1,8 @@
 # Screenshots legado (2022–2024) — tutoriais, roadmaps e desafios
 
-Complemento de [from-screenshots.md](./from-screenshots.md) (prompts 2025–2026). Conteúdo extraído das **360 imagens restantes** em `C:\Users\filip\Pictures\Pictures\Screenshots` — anos 2022, 2023 e início de 2024.
+Complemento de [origens/from-screenshots.md](../origens/from-screenshots.md) (prompts 2025–2026). Conteúdo extraído das **360 imagens restantes** em `C:\Users\filip\Pictures\Pictures\Screenshots` — anos 2022, 2023 e início de 2024.
+
+> **Índice por tipo (prompts):** [por-tipo.md](../por-tipo.md) · Tutoriais, roadmaps e desafios permanecem neste arquivo.
 
 ## Cobertura da varredura
 
@@ -19,23 +21,28 @@ Complemento de [from-screenshots.md](./from-screenshots.md) (prompts 2025–2026
 
 | Tipo | Itens | Imagens |
 |------|-------|---------|
+| [Aprendizado e estudo](#aprendizado-e-estudo) | 1 | 1 |
+| [Imagem (IA generativa)](#imagem-ia-generativa) | 1 | 2 |
 | Tutoriais de código | 28 | 28 |
 | Roadmaps / carreira | 9 | 11 |
 | Desafios de código | 1 | 1 |
-| Prompts extras (além de [from-screenshots.md](./from-screenshots.md)) | 2 | 2 |
-| **Já em [from-salvas.md](./from-salvas.md)** | vários | ver seção final |
+| **Já em [origens/from-salvas.md](../origens/from-salvas.md)** | vários | ver seção final |
 
 ---
 
-## Prompts extras (lote legado)
+## Aprendizado e estudo
 
 ### Técnica Feynman
 
-**Imagem:** `Screenshot_20230511-062848.png` — também em [from-screenshots.md](./from-screenshots.md)
+**Imagem:** `Screenshot_20230511-062848.png` — também em [origens/from-screenshots.md](../origens/from-screenshots.md)
 
 ```
 Explique [TÓPICO OU HABILIDADE] da forma mais simplificada possível como se estivesse ensinando a um iniciante completo.
 ```
+
+---
+
+## Imagem (IA generativa)
 
 ### DALL-E — imagem personalizada
 
@@ -337,7 +344,7 @@ Timeline de convocação/excedentes e possível novo edital (2024–2025) — qu
 
 ### `flatten()` — array aninhado
 
-**Imagem:** `Screenshot_20231027-210705.png` — **já documentado** em [from-salvas.md](./from-salvas.md#1-flatten--array-aninhado)
+**Imagem:** `Screenshot_20231027-210705.png` — **já documentado** em [origens/from-salvas.md](../origens/from-salvas.md#1-flatten--array-aninhado)
 
 Teste técnico (10 min): implementar `flatten` para `[[1, [2, 3, [4, [5]], 6, [7, [8]]]]]` → `[1..8]`.
 
@@ -345,7 +352,7 @@ Teste técnico (10 min): implementar `flatten` para `[[1, [2, 3, [4, [5]], 6, [7
 
 ## Já documentados em from-salvas (mesma pasta Screenshots)
 
-Não repetidos aqui; ver [from-salvas.md](./from-salvas.md):
+Não repetidos aqui; ver [origens/from-salvas.md](../origens/from-salvas.md):
 
 | Imagem | Tipo |
 |--------|------|

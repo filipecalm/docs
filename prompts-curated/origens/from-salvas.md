@@ -2,91 +2,34 @@
 
 Catálogo extraído de screenshots em `C:\Users\filip\Pictures\Salvas` (67 imagens, jun/2026).
 
-> **Índice por tipo:** [por-tipo.md](./por-tipo.md) · Roadmaps e desafios permanecem neste arquivo.
+> **Índice por tipo:** [por-tipo.md](../por-tipo.md) · Roadmaps e desafios permanecem neste arquivo.
 
-## Resumo
+## Resumo por tipo
 
 | Tipo | Qtd. itens | Imagens |
 |------|------------|---------|
-| Aprendizado | 8 | `20241119`, `20250201` |
-| Carreira — emprego remoto | 6 | `20241209-082125` |
-| Conteúdo — ideias de nicho | 15 | `20241229-134226` |
-| Produto digital — eBook | 1 | `20250519-140008` |
-| Comportamento — reflexão | 1 | `20250212-170022` |
-| Idiomas | 7 | `20250520-112117` … `112152` |
-| Carreira — entrevistas backend | 20 | `20241123-185902` |
-| Carreira — entrevistas difíceis | 8 | `20250202-125037` |
-| **Roadmaps de carreira** | **3** | `20241121-235713`, `20250303-222735`, `20250207-094505` |
-| **Desafios de código** | **3** | `20231027-210705`, `20250520-113411`, `20250519-123618` |
+| [Conteúdo e redes sociais](#conteúdo-e-redes-sociais) | 15 | `20241229-134226` |
+| [Produto digital e monetização](#produto-digital-e-monetização) | 1 | `20250519-140008` |
+| [Carreira e emprego](#carreira-e-emprego) | 34 | `20241209`, `20241123`, `20250202` |
+| [Aprendizado e estudo](#aprendizado-e-estudo) | 15 | `20241119`, `20250201`, `20250520` |
+| [Comportamento do agente](#comportamento-do-agente) | 1 | `20250212-170022` |
+| **Roadmaps de carreira** *(fora do [por-tipo](../por-tipo.md))* | **3** | `20241121-235713`, `20250303-222735`, `20250207-094505` |
+| **Desafios de código** *(fora do por-tipo)* | **3** | `20231027-210705`, `20250520-113411`, `20250519-123618` |
 | **Total documentado** | **72** | **20 imagens** |
 
 As outras 47 imagens não se encaixam nessas categorias (fotos pessoais, memes, redes sociais, finanças, notícias, etc.). Ver [Inventário completo](#inventário-completo-das-imagens).
 
 ---
 
-## Aprendizado — princípio 80/20
+## Conteúdo e redes sociais
 
-**Fonte:** `Screenshot_20241119-000216.png` — Instagram `@pelainteligencia` (slide 5 de uma série)
-
-### 1. Princípio 80/20
-
-```
-Quero aprender sobre [tópico]. Identifique e compartilhe os 20% do conteúdo mais relevantes que vão me permitir compreender 80% do assunto.
-```
-
----
-
-## Busca de emprego remoto
-
-**Fonte:** `Screenshot_20241209-082125.png` — Instagram (carrossel)
-
-### 2. Remote Job Search Expert
-
-```
-Act as a Remote Job Search Expert. Suggest 5 platforms for finding remote jobs in [industry]. Explain the pros/cons of each platform and provide tips for creating standout applications. Ensure platforms include global opportunities. Industry: (insert industry).
-```
-
-### 3. Career Coach
-
-```
-Imagine you're a career coach helping job seekers find remote work. Provide a detailed action plan for someone seeking a [type of job]. Include how to identify credible postings, personalize applications, and ace virtual interviews. Job type: (insert job type).
-```
-
-### 4. LinkedIn Optimization
-
-```
-You are an AI advisor for LinkedIn optimization. Explain step-by-step how to update a LinkedIn profile to attract remote job offers in [field]. Include tips on using keywords, networking effectively, and building a professional portfolio. Field: (insert field).
-```
-
-### 5. Build Online Presence
-
-```
-As a Remote Work Strategist, guide me through building an online presence that attracts remote employers. Detail how to use [platform] effectively to showcase skills, engage with communities, and find openings. Focus platform: (insert platform).
-```
-
-### 6. Tailored Resume
-
-```
-Guide me on how to write a tailored resume and cover letter for a remote job in [sector]. Include keywords, formatting tips, and strategies to highlight remote-relevant skills like time management or communication. Sector: (insert sector).
-```
-
-### 7. Daily Job Search Plan
-
-```
-Act as an AI career coach. Outline a daily schedule for someone dedicated to finding remote jobs. Include tasks like applying to [number] jobs, networking on [platform], and improving skills via [resource]. Platform: (insert platform).
-```
-
-> O slide 7 estava cortado na captura; o texto acima é o que aparece visível.
-
----
-
-## Ideias de conteúdo
+### Ideias de conteúdo
 
 **Fonte:** `Screenshot_20241229-134226.png` — Threads `@cassiano.girardi`
 
 Tópicos para vídeos, posts ou roteiros. Use como: `Crie um roteiro de 60 segundos sobre [tópico].`
 
-### 8–22. Nichos de conteúdo
+#### 1–15. Nichos de conteúdo
 
 1. Mistérios não resolvidos
 2. Fatos históricos surpreendentes
@@ -106,79 +49,13 @@ Tópicos para vídeos, posts ou roteiros. Use como: `Crie um roteiro de 60 segun
 
 ---
 
-## DeepSeek — aprendizado e escrita
+## Produto digital e monetização
 
-**Fonte:** `Screenshot_20250201-072146.png` — infográfico em inglês
-
-### 23. 80/20 para aprender mais rápido
-
-```
-I want to learn about [insert topic]. Determine and share the 20% of the topic's lessons that are most crucial to understanding the remaining 80%.
-```
-
-### 24. Melhorar a escrita
-
-```
-[paste your writing]
-
-Please proofread the text above. Correct grammatical and spelling mistakes. and offer ideas that will make my writing more lucid.
-```
-
-### 25. Aprender qualquer habilidade nova
-
-```
-I want to learn [insert desired skill]. Create a 30 day learning plan that will help a beginner like me learn and improve this skill.
-```
-
-### 26. DeepSeek como estagiário
-
-```
-I am creating a report about [insert topic]. Research and create an in-depth report with a step-by-step guide that will help readers understand how to [insert outcome].
-```
-
-### 27. Reforçar o aprendizado
-
-```
-I am currently learning about [insert topic]. Ask me a series of questions that will test my knowledge. Identify knowledge gaps in my answers and give me better answers to fill those gaps.
-```
-
-### 28. Plano de aprendizado personalizado
-
-```
-Help me design a personalized learning plan for mastering [subject]. Break it down into daily learning tasks, recommended resources, and practical exercises I can do to build my skills.
-```
-
-### 29. Mergulho profundo em um tópico
-
-```
-Act as an expert on [subject], explain the most important concepts and provide real-world examples to illustrate each. Then, give me a step-by-step guide to master this topic in the next 30 days.
-```
-
----
-
-## Reflexão / motivação pessoal
-
-**Fonte:** `Screenshot_20250212-170022.png` — Instagram `@cassiano.girardi` (slide 2/3)
-
-### 30. Por que minha vida parece parada?
-
-```
-Chat, tudo bem? Por que minha vida parece parada no tempo, enquanto vejo outras pessoas conquistando liberdade financeira e realizando seus sonhos? Por que, mesmo tentando várias coisas, eu ainda não consigo resultados reais?
-
-Será que eu sou o problema ou estou apenas usando a estratégia errada?
-
-O que está me mantendo preso(a) à zona de conforto, mesmo sabendo que isso me frustra todos os dias? Como posso, de verdade, dar o primeiro passo sem me paralisar pelo medo de errar?
-
-Quais histórias de pessoas que estavam na mesma situação que eu podem me inspirar a acreditar que ainda dá tempo de mudar?
-```
-
----
-
-## Criação de eBook
+### Criação de eBook
 
 **Fonte:** `Screenshot_20250519-140008.png` — Instagram `@carlos.sousasoares`
 
-### 31. Template para eBook com ChatGPT
+#### 16. Template para eBook com ChatGPT
 
 ```
 Tema: [Especifique aqui]
@@ -190,57 +67,57 @@ Ao final, gere também 3 ideias de posts para redes sociais que ajudem a divulga
 
 ---
 
-## Aprendizado de idiomas
+## Carreira e emprego
 
-**Fonte:** `Screenshot_20250520-112117.png` … `112152.png` — carrossel de Thiago Augusto `@jornadatop` (10 slides; faltam 3, 8, 9 e 10 na pasta)
+### Busca de emprego remoto
 
-### 32. Simulação de conversa real
+**Fonte:** `Screenshot_20241209-082125.png` — Instagram (carrossel)
 
-```
-Simule uma conversa real comigo em uma [entrevista em restaurante/aeroporto/emprego]. Me responda como um falante nativo.
-```
-
-### 33. Correção de texto para iniciante
+#### 17. Remote Job Search Expert
 
 ```
-Corrija este texto que escrevi em [idioma] e me explique como se eu fosse um iniciante. Aponte erros de gramática, vocabulário e estilo.
+Act as a Remote Job Search Expert. Suggest 5 platforms for finding remote jobs in [industry]. Explain the pros/cons of each platform and provide tips for creating standout applications. Ensure platforms include global opportunities. Industry: (insert industry).
 ```
 
-### 34. 10 palavras novas com frases do dia a dia
+#### 18. Career Coach
 
 ```
-Me ensine 10 palavras novas em [idioma] e use elas em frases úteis do dia a dia. Depois, faça perguntas sobre elas.
+Imagine you're a career coach helping job seekers find remote work. Provide a detailed action plan for someone seeking a [type of job]. Include how to identify credible postings, personalize applications, and ace virtual interviews. Job type: (insert job type).
 ```
 
-### 35. Tradução com tom formal/informal
+#### 19. LinkedIn Optimization
 
 ```
-Traduza esta frase para [idioma], mas adapte o tom (formal ou informal) de acordo com o contexto que eu lhe der. Explique as diferenças.
+You are an AI advisor for LinkedIn optimization. Explain step-by-step how to update a LinkedIn profile to attract remote job offers in [field]. Include tips on using keywords, networking effectively, and building a professional portfolio. Field: (insert field).
 ```
 
-### 36. Compreensão auditiva
+#### 20. Build Online Presence
 
 ```
-Me dê um texto curto em [idioma] com áudio (ou texto simulado) e depois faça perguntas para praticar a compreensão auditiva.
+As a Remote Work Strategist, guide me through building an online presence that attracts remote employers. Detail how to use [platform] effectively to showcase skills, engage with communities, and find openings. Focus platform: (insert platform).
 ```
 
-### 37. Mini-aula a cada erro
+#### 21. Tailored Resume
 
 ```
-Toda vez que eu cometer um erro de idioma, transforme isso em uma mini-aula rápida. Explique por que está errado e como eu posso melhorar.
+Guide me on how to write a tailored resume and cover letter for a remote job in [sector]. Include keywords, formatting tips, and strategies to highlight remote-relevant skills like time management or communication. Sector: (insert sector).
 ```
 
-> Slides ausentes na pasta: **3º**, **8º**, **9º** e **10º** prompt da série.
+#### 22. Daily Job Search Plan
 
----
+```
+Act as an AI career coach. Outline a daily schedule for someone dedicated to finding remote jobs. Include tasks like applying to [number] jobs, networking on [platform], and improving skills via [resource]. Platform: (insert platform).
+```
 
-## Entrevistas técnicas — backend pleno
+> O slide 7 estava cortado na captura; o texto acima é o que aparece visível.
+
+### Entrevistas técnicas — backend pleno
 
 **Fonte:** `Screenshot_20241123-185902.png` — LinkedIn, Johel Carvalho
 
 Perguntas para praticar ou colar no ChatGPT: `Responda como dev backend pleno: [pergunta]`
 
-### 38–57. Perguntas de entrevista backend
+#### 23–42. Perguntas de entrevista backend
 
 1. Como você refatoraria um código legado com alta complexidade ciclomática?
 2. Como você implementaria um sistema de cache em múltiplas camadas?
@@ -263,13 +140,11 @@ Perguntas para praticar ou colar no ChatGPT: `Responda como dev backend pleno: [
 19. Como você implementaria um bom esquema de logs?
 20. O que faria para garantir a qualidade do código em um time?
 
----
-
-## Entrevistas técnicas — perguntas difíceis
+### Entrevistas técnicas — perguntas difíceis
 
 **Fonte:** `Screenshot_20250202-125037.png` — post LinkedIn
 
-### 58–65. Perguntas que pegam candidatos de surpresa
+#### 43–50. Perguntas que pegam candidatos de surpresa
 
 1. Quando usar NoSQL vs SQL?
 2. Uma query está muito lenta, qual sua estratégia para solucionar o problema?
@@ -279,6 +154,126 @@ Perguntas para praticar ou colar no ChatGPT: `Responda como dev backend pleno: [
 6. Qual a diferença entre concorrência e paralelismo?
 7. Como você investigaria um erro em produção?
 8. Como você garante que o sistema esteja funcionando corretamente?
+
+---
+
+## Aprendizado e estudo
+
+### Princípio 80/20
+
+**Fonte:** `Screenshot_20241119-000216.png` — Instagram `@pelainteligencia` (slide 5 de uma série)
+
+```
+Quero aprender sobre [tópico]. Identifique e compartilhe os 20% do conteúdo mais relevantes que vão me permitir compreender 80% do assunto.
+```
+
+### DeepSeek — aprendizado e escrita
+
+**Fonte:** `Screenshot_20250201-072146.png` — infográfico em inglês
+
+#### 80/20 para aprender mais rápido
+
+```
+I want to learn about [insert topic]. Determine and share the 20% of the topic's lessons that are most crucial to understanding the remaining 80%.
+```
+
+#### Melhorar a escrita
+
+```
+[paste your writing]
+
+Please proofread the text above. Correct grammatical and spelling mistakes. and offer ideas that will make my writing more lucid.
+```
+
+#### Aprender qualquer habilidade nova
+
+```
+I want to learn [insert desired skill]. Create a 30 day learning plan that will help a beginner like me learn and improve this skill.
+```
+
+#### DeepSeek como estagiário
+
+```
+I am creating a report about [insert topic]. Research and create an in-depth report with a step-by-step guide that will help readers understand how to [insert outcome].
+```
+
+#### Reforçar o aprendizado
+
+```
+I am currently learning about [insert topic]. Ask me a series of questions that will test my knowledge. Identify knowledge gaps in my answers and give me better answers to fill those gaps.
+```
+
+#### Plano de aprendizado personalizado
+
+```
+Help me design a personalized learning plan for mastering [subject]. Break it down into daily learning tasks, recommended resources, and practical exercises I can do to build my skills.
+```
+
+#### Mergulho profundo em um tópico
+
+```
+Act as an expert on [subject], explain the most important concepts and provide real-world examples to illustrate each. Then, give me a step-by-step guide to master this topic in the next 30 days.
+```
+
+### Idiomas
+
+**Fonte:** `Screenshot_20250520-112117.png` … `112152.png` — carrossel de Thiago Augusto `@jornadatop` (10 slides; faltam 3, 8, 9 e 10 na pasta)
+
+#### Simulação de conversa real
+
+```
+Simule uma conversa real comigo em uma [entrevista em restaurante/aeroporto/emprego]. Me responda como um falante nativo.
+```
+
+#### Correção de texto para iniciante
+
+```
+Corrija este texto que escrevi em [idioma] e me explique como se eu fosse um iniciante. Aponte erros de gramática, vocabulário e estilo.
+```
+
+#### 10 palavras novas com frases do dia a dia
+
+```
+Me ensine 10 palavras novas em [idioma] e use elas em frases úteis do dia a dia. Depois, faça perguntas sobre elas.
+```
+
+#### Tradução com tom formal/informal
+
+```
+Traduza esta frase para [idioma], mas adapte o tom (formal ou informal) de acordo com o contexto que eu lhe der. Explique as diferenças.
+```
+
+#### Compreensão auditiva
+
+```
+Me dê um texto curto em [idioma] com áudio (ou texto simulado) e depois faça perguntas para praticar a compreensão auditiva.
+```
+
+#### Mini-aula a cada erro
+
+```
+Toda vez que eu cometer um erro de idioma, transforme isso em uma mini-aula rápida. Explique por que está errado e como eu posso melhorar.
+```
+
+> Slides ausentes na pasta: **3º**, **8º**, **9º** e **10º** prompt da série.
+
+---
+
+## Comportamento do agente
+
+### Reflexão / motivação pessoal
+
+**Fonte:** `Screenshot_20250212-170022.png` — Instagram `@cassiano.girardi` (slide 2/3)
+
+```
+Chat, tudo bem? Por que minha vida parece parada no tempo, enquanto vejo outras pessoas conquistando liberdade financeira e realizando seus sonhos? Por que, mesmo tentando várias coisas, eu ainda não consigo resultados reais?
+
+Será que eu sou o problema ou estou apenas usando a estratégia errada?
+
+O que está me mantendo preso(a) à zona de conforto, mesmo sabendo que isso me frustra todos os dias? Como posso, de verdade, dar o primeiro passo sem me paralisar pelo medo de errar?
+
+Quais histórias de pessoas que estavam na mesma situação que eu podem me inspirar a acreditar que ainda dá tempo de mudar?
+```
 
 ---
 
