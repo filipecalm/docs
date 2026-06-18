@@ -432,7 +432,7 @@ Cenário base: 10k MAU × 3% × R$ 9,90 ≈ **R$ 2.970/mês**.
 4. Reaproveite TodoList como diferencial ou remova.
 5. Open Finance só na Fase 3, quando MRR base &gt; R$ 3k e retenção D30 comprovada.
 
-Detalhamento em issues: [backlog.md](./backlog.md).
+Detalhamento em issues: [backlog.md](./backlog.md) · [GitHub #8–#30](https://github.com/filipecalm/trillho/issues) · [github-issues.md](./github-issues.md).
 
 ---
 

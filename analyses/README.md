@@ -8,7 +8,7 @@ Cada pasta contém o relatório completo (Etapas 1–5), premissas, fontes e —
 
 | Projeto | Repositório | Data | Documentos |
 |---------|-------------|------|------------|
-| **Trilho** | [trillho](../../trillho) | 2026-06-18 | [product-analysis.md](./trilho/product-analysis.md) · [backlog.md](./trilho/backlog.md) |
+| **Trilho** | [trillho](https://github.com/filipecalm/trillho) | 2026-06-18 | [product-analysis.md](./trilho/product-analysis.md) · [backlog.md](./trilho/backlog.md) · [github-issues.md](./trilho/github-issues.md) · [Issues #8–#30](https://github.com/filipecalm/trillho/issues) |
 
 ## Como adicionar uma nova análise
 

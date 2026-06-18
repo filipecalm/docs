@@ -8,6 +8,7 @@ Análise estratégica do app **Trilho** (repositório [trillho](../../../trillho
 | **Tagline** | Seu dinheiro no trilho |
 | **Mercado-alvo** | Brasil (B2C) |
 | **Data da análise** | 2026-06-18 |
+| **Issues GitHub** | 2026-06-18 ([#8–#30](https://github.com/filipecalm/trillho/issues)) |
 | **Versão analisada** | 2.0.1 (`versionCode` 8) |
 | **Prompt** | [prompt-04-analise-produto.md](../../prompts-generic/prompt-04-analise-produto.md) |
 
@@ -17,6 +18,8 @@ Análise estratégica do app **Trilho** (repositório [trillho](../../../trillho
 |---------|----------|
 | [product-analysis.md](./product-analysis.md) | Relatório completo — Etapas 1 a 5, premissas e fontes |
 | [backlog.md](./backlog.md) | Roadmap em formato de issues (Etapa 5) |
+| [github-issues.md](./github-issues.md) | Índice das issues no GitHub + dependências |
+| [github-issues.json](./github-issues.json) | Mapeamento ID → número/URL (machine-readable) |
 
 ## Resumo executivo
 
