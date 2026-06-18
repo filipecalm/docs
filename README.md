@@ -27,6 +27,7 @@ Plataformas: **Android** (produção via EAS/Play Store), **iOS** (configurado),
 | [decisions.md](./decisions.md) | ADRs inferidos das escolhas no código |
 | [prompts.md](./prompts.md) | Prompts úteis para modernização e documentação (com matriz de gaps) |
 | [prompts-generic/](./prompts-generic/) | Versões genéricas dos prompts (qualquer projeto/nicho) |
+| [prompts-curated/](./prompts-curated/) | Prompts por [tipo](./prompts-curated/por-tipo.md); [Screenshots](./prompts-curated/from-screenshots.md); [templates](./prompts-curated/templates/) |
 | [analyses/](./analyses/) | Entregáveis do Prompt 4 por projeto (produto, mercado, monetização) |
 | [cursor-semantic-commits.md](./cursor-semantic-commits.md) | Commits semânticos no Cursor (skills, commands e User Rules globais) |
 | [cursor/](./cursor/) | Arquivos versionados para instalar em `~/.cursor/` |
