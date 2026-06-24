@@ -1,0 +1,212 @@
+[
+  {
+    "id": "MEM-001",
+    "title": "Remover copy de teste no fluxo de pagamento",
+    "labels": [
+      "fase-1",
+      "P0",
+      "monetization"
+    ],
+    "body": "## Descrição\nSubstituir \"Pagar com Stripe (teste)\" por copy de produção (\"Criar jogo personalizado — R$ 19,90\").\n\n**Análise:** [product-analysis.md](https://github.com/filipecalm/docs/blob/main/analyses/memory-game/product-analysis.md)\n\n## Critérios de aceite\n- [ ] Nenhuma string com \"teste\" ou \"Stripe\" visível ao usuário final no app\n- [ ] Pagamento mostra preço e benefícios claros",
+    "number": 1,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/1"
+  },
+  {
+    "id": "MEM-002",
+    "title": "Corrigir acesso ao jogo web pós-compra sem login obrigatório",
+    "labels": [
+      "fase-1",
+      "P0",
+      "enhancement"
+    ],
+    "body": "## Descrição\nComprador que pagou e fez upload deve jogar em `/game/:id` sem criar conta. Login opcional para biblioteca.\n\n## Critérios de aceite\n- [ ] Fluxo create → success → upload → game completo sem tela de login\n- [ ] Convidado com link também joga",
+    "number": 2,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/2"
+  },
+  {
+    "id": "MEM-003",
+    "title": "Política de privacidade completa (LGPD)",
+    "labels": [
+      "fase-1",
+      "P0",
+      "compliance",
+      "documentation"
+    ],
+    "body": "## Descrição\nDocumentar coleta de fotos, email, AdMob, Stripe, retenção, direitos do titular e contato do responsável.\n\n## Critérios de aceite\n- [ ] `/politica-de-privacidade` menciona AdMob (child-directed)\n- [ ] Menciona Stripe e Supabase Storage\n- [ ] Define prazo de retenção de imagens",
+    "number": 3,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/3"
+  },
+  {
+    "id": "MEM-004",
+    "title": "Link/QR compartilhável para presenteado",
+    "labels": [
+      "fase-1",
+      "P0",
+      "enhancement"
+    ],
+    "body": "## Descrição\nApós criar jogo custom, gerar link público (token ou slug) para presenteado jogar no browser ou deep link no app.\n\n## Critérios de aceite\n- [ ] Comprador copia link ou baixa QR\n- [ ] Presenteado abre e joga 24 cartas sem pagar",
+    "number": 4,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/4"
+  },
+  {
+    "id": "MEM-005",
+    "title": "Biblioteca \"Meus jogos\" via magic link",
+    "labels": [
+      "fase-1",
+      "P0",
+      "enhancement"
+    ],
+    "body": "## Descrição\nUsuário informa email; recebe link com lista de jogos comprados/criados.\n\n## Critérios de aceite\n- [ ] Email com ≥1 jogo retorna lista\n- [ ] Tap reabre upload ou jogo conforme estado",
+    "number": 5,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/5"
+  },
+  {
+    "id": "MEM-006",
+    "title": "Documento de decisão: Stripe vs Play Billing no Android",
+    "labels": [
+      "fase-1",
+      "P0",
+      "compliance",
+      "monetization",
+      "documentation"
+    ],
+    "body": "## Descrição\nAvaliar política Google para digital goods in-app; definir migração ou isenção aplicável.\n\n## Critérios de aceite\n- [ ] Markdown em `docs/` com decisão, prazo e alternativa\n- [ ] Cobre Play Billing, produto físico-equivalente e web-only purchase",
+    "number": 6,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/6"
+  },
+  {
+    "id": "MEM-007",
+    "title": "Timer e contador de jogadas no app mobile",
+    "labels": [
+      "fase-2",
+      "P1",
+      "enhancement"
+    ],
+    "body": "## Critérios de aceite\n- [ ] Game mobile exibe tempo e número de jogadas\n- [ ] Paridade mínima com web",
+    "number": 7,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/7"
+  },
+  {
+    "id": "MEM-008",
+    "title": "Mensagem surpresa no modal de vitória (custom)",
+    "labels": [
+      "fase-2",
+      "P1",
+      "enhancement"
+    ],
+    "body": "## Critérios de aceite\n- [ ] Campo opcional no create\n- [ ] Exibido ao completar todas as pairs em jogo custom",
+    "number": 8,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/8"
+  },
+  {
+    "id": "MEM-009",
+    "title": "Tier Custom Básico — 6 fotos / R$ 9,90",
+    "labels": [
+      "fase-2",
+      "P1",
+      "monetization",
+      "enhancement"
+    ],
+    "body": "## Critérios de aceite\n- [ ] Novo Stripe Price ID\n- [ ] Grid 3×4\n- [ ] Checkout e upload validam 6 imagens",
+    "number": 9,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/9"
+  },
+  {
+    "id": "MEM-010",
+    "title": "IAP Remover anúncios (Play Billing)",
+    "labels": [
+      "fase-2",
+      "P1",
+      "monetization"
+    ],
+    "body": "## Critérios de aceite\n- [ ] Produto na Play Console\n- [ ] Temas grátis sem banner/interstitial após compra",
+    "number": 10,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/10"
+  },
+  {
+    "id": "MEM-011",
+    "title": "Modo 2 jogadores local",
+    "labels": [
+      "fase-2",
+      "P1",
+      "enhancement"
+    ],
+    "body": "## Critérios de aceite\n- [ ] Dois jogadores alternam\n- [ ] Placar de pairs por jogador\n- [ ] Funciona em tema grátis",
+    "number": 11,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/11"
+  },
+  {
+    "id": "MEM-012",
+    "title": "ASO — assets Play Store com foco em presente personalizado",
+    "labels": [
+      "fase-2",
+      "P1",
+      "marketing"
+    ],
+    "body": "## Critérios de aceite\n- [ ] Screenshots atualizados\n- [ ] Short description contém \"presente\" e \"fotos\"\n- [ ] Keywords revisadas",
+    "number": 12,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/12"
+  },
+  {
+    "id": "MEM-013",
+    "title": "Pacote Custom Plus (mensagem por carta + música)",
+    "labels": [
+      "fase-3",
+      "P2",
+      "monetization",
+      "enhancement"
+    ],
+    "body": "## Critérios de aceite\n- [ ] Checkout tier Plus\n- [ ] Upload aceita mensagens por carta\n- [ ] Música opcional no jogo",
+    "number": 13,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/13"
+  },
+  {
+    "id": "MEM-014",
+    "title": "Plano Família — assinatura mensal",
+    "labels": [
+      "fase-3",
+      "P2",
+      "monetization"
+    ],
+    "body": "## Critérios de aceite\n- [ ] Play Billing subscription\n- [ ] 3 custom PRO/mês\n- [ ] Sem ads\n- [ ] Cancelamento funcional",
+    "number": 14,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/14"
+  },
+  {
+    "id": "MEM-015",
+    "title": "APK standalone opcional pós-custom",
+    "labels": [
+      "fase-3",
+      "P2",
+      "enhancement"
+    ],
+    "body": "## Critérios de aceite\n- [ ] UI mostra link de download quando `build_id` disponível\n- [ ] README de suporte",
+    "number": 15,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/15"
+  },
+  {
+    "id": "MEM-016",
+    "title": "Tema sazonal rotativo",
+    "labels": [
+      "fase-3",
+      "P2",
+      "enhancement",
+      "marketing"
+    ],
+    "body": "## Critérios de aceite\n- [ ] Terceiro tema disponível por período limitado\n- [ ] Removível sem deploy de app (OTA ou remote config)",
+    "number": 16,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/16"
+  },
+  {
+    "id": "MEM-017",
+    "title": "Piloto B2B — landing e orçamento",
+    "labels": [
+      "fase-3",
+      "P2",
+      "marketing"
+    ],
+    "body": "## Critérios de aceite\n- [ ] Página `/empresas` ou PDF comercial\n- [ ] 1 lead qualificado contactado",
+    "number": 17,
+    "url": "https://github.com/filipecalm/memory-game-monorepo/issues/17"
+  }
+]
