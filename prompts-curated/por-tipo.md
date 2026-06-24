@@ -12,8 +12,9 @@
 | Produto digital e monetização | [produto-digital/](./produto-digital/) | 4 |
 | Carreira e emprego | [carreira/](./carreira/) | ~34 |
 | Aprendizado e estudo | [aprendizado/](./aprendizado/) | ~22 |
-| Desenvolvimento e engenharia | [desenvolvimento/](./desenvolvimento/) | 3 |
+| Desenvolvimento e engenharia | [desenvolvimento/](./desenvolvimento/) | 8 |
 | Finanças pessoais | [financas/](./financas/) | 2 |
+| Saúde e fitness | [saude/](./saude/) | 1 |
 | Concurso e certificação | [concurso/](./concurso/) | 1 |
 | Imagem (IA generativa) | [imagem/](./imagem/) | 2 |
 | Comportamento do agente | [comportamento-agente/](./comportamento-agente/) | 7 |
@@ -98,6 +99,14 @@ Feynman · 80/20 · DeepSeek (7) · produtividade (6) · idiomas (7)
 
 **Pasta:** [desenvolvimento/](./desenvolvimento/)
 
+### App Development Kit (5)
+
+**Fonte:** @gurudoprompt
+
+Arquiteto · Full Stack · Designer · Monetizador · Lançador — construção completa de aplicativos do zero.
+
+### Outros (3)
+
 Co-Fundador Técnico · auditoria de segurança · análise de JD
 
 ---
@@ -155,5 +164,6 @@ Pensamento crítico (5 regras) · reflexão pessoal
 | Primeiro produto digital | [produto-digital/](./produto-digital/) |
 | Vaga remota | [carreira/](./carreira/) |
 | Estudar stack nova | [aprendizado/](./aprendizado/) |
+| Construir um app do zero | [desenvolvimento/app-development.md](./desenvolvimento/app-development.md) |
 | MVP com Cursor | [desenvolvimento/co-fundador-tecnico.md](./desenvolvimento/co-fundador-tecnico.md) |
 | Validar ideia antes de codar | [comportamento-agente/pensamento-critico.md](./comportamento-agente/pensamento-critico.md) |

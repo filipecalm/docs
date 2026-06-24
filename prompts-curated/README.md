@@ -14,8 +14,9 @@ Coleção de prompts extraídos de fontes externas (screenshots, redes sociais),
 | [produto-digital/](./produto-digital/) | eBooks e infoprodutos |
 | [carreira/](./carreira/) | Emprego remoto, entrevistas, LinkedIn |
 | [aprendizado/](./aprendizado/) | Estudo, DeepSeek, idiomas, Feynman |
-| [desenvolvimento/](./desenvolvimento/) | Co-Fundador Técnico, auditoria de segurança |
+| [desenvolvimento/](./desenvolvimento/) | 5 prompts App Development Kit + Co-Fundador Técnico, auditoria de segurança |
 | [financas/](./financas/) | Orçamento e cortes |
+| [saude/](./saude/) | Treino, dieta e métricas de progresso |
 | [concurso/](./concurso/) | CESGRANRIO Banco do Brasil |
 | [imagem/](./imagem/) | Upscale e melhoria de imagem |
 | [comportamento-agente/](./comportamento-agente/) | Pensamento crítico, reflexão |
@@ -38,9 +39,9 @@ Cada pasta de tipo contém os prompts com placeholders padronizados — no mesmo
 | Pasta | Arquivos principais |
 |-------|---------------------|
 | [youtube/](./youtube/) | pacote-completo, workflow-sem-rosto, ideias-virais, titulos-virais, roteiro-magnetico |
-| [instagram/](./instagram/) | crescimento-faceless |
+| [instagram/](./instagram/) | crescimento-faceless, instagram-growth |
 | [aprendizado/](./aprendizado/) | produtividade |
-| [desenvolvimento/](./desenvolvimento/) | co-fundador-tecnico, auditoria-seguranca |
+| [desenvolvimento/](./desenvolvimento/) | app-development, co-fundador-tecnico, auditoria-seguranca |
 | [financas/](./financas/) | orcamento-e-cortes |
 | [concurso/](./concurso/) | cesgranrio-bb |
 | [imagem/](./imagem/) | melhoria-imagem |

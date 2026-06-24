@@ -10,7 +10,7 @@ Prompts extraídos de `C:\Users\filip\Pictures\Pictures\Screenshots` (997 imagen
 
 | Tipo | Qtd. | Template |
 |------|------|----------|
-| Conteúdo e redes sociais | 8 | [instagram/crescimento-faceless.md](../instagram/crescimento-faceless.md) |
+| Conteúdo e redes sociais | 14 | [instagram/crescimento-faceless.md](../instagram/crescimento-faceless.md) |
 | Produto digital | 2 | [produto-digital/](../produto-digital/) |
 | Carreira e emprego | 2 | [carreira/](../carreira/) |
 | Aprendizado | 1 | [aprendizado/](../aprendizado/) |
@@ -40,6 +40,20 @@ Prompts extraídos de `C:\Users\filip\Pictures\Pictures\Screenshots` (997 imagen
 6. Liste 5 maneiras de monetizar uma conta nova do Instagram sobre [nicho], incluindo afiliados, programas de assinaturas e produtos digitais.
 
 7. Me mostre como postar conteúdos em massa, agendar postagens e automatizar legendas para que minha conta seja executada no piloto automático.
+```
+
+### Instagram (6)
+
+**Fonte:** prompt extraído de post de rede social.  
+**Doc:** [../instagram/instagram-growth.md](../instagram/instagram-growth.md)
+
+```
+1. Instagram Growth Manager Mode
+2. Instagram Audit Mode
+3. Reel Growth Machine
+4. Personal Brand Builder
+5. The 90-Day Instagram Growth Plan
+6. Instagram Monetization Mode
 ```
 
 ### YouTube — canal de receitas (1)
@@ -86,6 +100,15 @@ Informações base:
 ```
 Sua tarefa é criar um E-book completo e detalhado sobre o tema: [SEU NICHO]. Que não se limite apenas a títulos ou capítulos, mas que contenha conteúdo aprofundado em cada parte de forma estruturada e prática, para entregar valor ao leitor. O E-book deve ser educativo, envolvente incluindo passo a passo, com explicações claras, exemplos e ações aplicáveis.
 ```
+
+---
+
+## Saúde e fitness
+
+### Personal trainer digital — perda de gordura e ganho de massa muscular
+
+**Fonte:** prompt extraído de comentário de rede social.  
+**Doc:** [../saude/personal-trainer.md](../saude/personal-trainer.md)
 
 ---
 
