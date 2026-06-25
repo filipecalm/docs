@@ -114,15 +114,37 @@ Com 3% de conversão e churn mensal de 5%, é preciso ~**1.100 novos pagantes/an
 
 ## Integração de pagamento
 
+### Google Play Store + Stripe
+
+**Correção:** dá para usar Stripe num app na Play Store — o que a política do Google restringe é cobrar **dentro do app**, por **billing próprio**, por **recursos digitais** (assinatura, desbloqueio de features) **sem** passar pelo Google Play Billing.
+
+O que costuma funcionar (e provavelmente é o que você já faz no outro app):
+
+| Modelo | Stripe? | Play Billing? | Observação |
+|---|---|---|---|
+| Checkout **externo** (browser / Custom Tab) | ✅ | ❌ | Usuário paga fora do fluxo nativo; app só valida entitlement no servidor |
+| Assinatura **in-app** com botão que abre Stripe **dentro** do app | ⚠️ | ❌ | Risco de rejeição — Google trata como bypass de billing |
+| Assinatura via **Google Play Billing** | ❌* | ✅ | Obrigatório se vender a assinatura **dentro** do app Android |
+| **Híbrido** (Play no Android + Stripe na web) | ✅ | ✅ | Comum; RevenueCat ou backend unifica o tier |
+
+\* O pagamento passa pela Google; o dinheiro não cai direto no Stripe, mas você pode espelhar o status no backend.
+
+**Para o AutoLog na Play Store**, caminho alinhado ao que você já conhece:
+
+1. **Stripe Checkout** em URL externa (`Custom Tabs` / `url_launcher`) — não embutir SDK de pagamento como se fosse compra nativa.
+2. **Webhook Stripe** → Appwrite (`subscriptions`) → app consulta tier ao abrir / após login sync.
+3. Opcional depois: **Google Play Billing** para quem prefere pagar pela loja (mesmos planos, preços ajustados à comissão de ~15–30%).
+
+RevenueCat **não substitui** Stripe; ele **unifica** Play Billing + App Store + (opcional) Stripe web num único entitlement. Só é necessário se quiser IAP nativo **além** do Stripe.
+
 ### Gateways
 
 | Canal | Solução | Motivo |
 |---|---|---|
-| Web / checkout externo | **Stripe Checkout** | BRL, API madura, Customer Portal, webhooks |
-| Google Play / App Store | **RevenueCat** | Obrigatório para IAP; unifica entitlement |
+| Android (checkout externo) | **Stripe Checkout** + backend | Mesmo stack dos seus outros apps; BRL, webhooks, Customer Portal |
+| Android (IAP nativo, opcional) | **Google Play Billing** + RevenueCat | Quem insiste em pagar pela Play Store |
+| iOS (se publicar) | App Store IAP ou link externo conforme região | Regras da Apple são mais rígidas que a Google |
 | PIX (fase 2) | Stripe PIX ou **Mercado Pago** | Preferência de pagamento no BR |
-
-Stripe + RevenueCat cobre web + mobile com uma fonte de verdade de entitlement.
 
 ### Arquivos no repositório
 
@@ -131,55 +153,120 @@ Repositório [car_maintenance](https://github.com/filipecalm/car_maintenance):
 | Arquivo | Função |
 |---|---|
 | `web/pricing.html` | Página de preços (WebView ou hospedagem) |
-| `scripts/stripe-checkout/server.js` | API: checkout, portal de cancelamento, webhook → Appwrite |
-| `scripts/stripe-checkout/package.json` | Dependências do servidor |
+| `scripts/appwrite-functions/` | Appwrite Functions: checkout API + webhook Stripe → Appwrite |
+| `scripts/appwrite-functions/stripe-checkout/` | Rotas: checkout, portal, status |
+| `scripts/appwrite-functions/stripe-webhook/` | Webhook Stripe (raw body, assinatura) |
+| `scripts/stripe-checkout/server.js` | Fallback local dev (Express, deprecated) |
 | `lib/models/subscription_plan.dart` | Definição de planos, limites e price IDs Stripe |
-| `lib/services/subscription_service.dart` | Enforcement de limites + chamada ao checkout |
+| `lib/config/stripe_config.dart` | URL base da function `stripe-checkout` (`STRIPE_CHECKOUT_API`) |
+| `lib/screens/pricing_screen.dart` | Planos + abertura do Stripe Checkout (Custom Tab) |
+| `lib/services/subscription_service.dart` | Paywalls, checkout, deep link, polling do tier |
 
-### Fluxo de checkout
+### Fluxo de checkout (Flutter → Stripe → Appwrite → app)
+
+```
+Configurações → Planos → Assinar
+  → POST {checkout-function-domain}/create-checkout-session
+  → Custom Tab / inAppBrowserView (Stripe Checkout)
+  → success_url: autolog://checkout/success
+  → webhook checkout.session.completed → tabela subscriptions (Appwrite)
+  → deep link ou resume do app → GET {checkout-function-domain}/subscription/status?email=
+  → SubscriptionService aplica tier local
+```
+
+### Configurar no app
+
+1. Deploy das Appwrite Functions (`scripts/appwrite-functions/README.md`).
+2. Copiar o **domain URL** da function `stripe-checkout` (Console → Functions → Domains).
+3. Em `lib/config/stripe_config.dart`, substituir `checkoutApiBase` pelo domain (sem barra final).
+4. Ou compilar com: `flutter run --dart-define=STRIPE_CHECKOUT_API=https://67abc123.nyc.appwrite.run`
+5. Hot **restart** após mudar a URL.
+
+Deep link Android: `autolog://checkout/*` (intent-filter no `AndroidManifest.xml`).
+
+### Fluxo de checkout (legado HTML)
 
 ```
 Usuário clica "Assinar" (pricing.html)
-  → POST /create-checkout-session (server.js)
+  → POST {checkout-function-domain}/create-checkout-session
   → Redirect Stripe Checkout (locale pt-BR)
   → Pagamento OK → webhook checkout.session.completed
   → Grava tier no Appwrite
   → App sincroniza entitlement local
 ```
 
-### Deploy do backend
+### Deploy do backend (Appwrite Functions)
 
-```bash
-cd scripts/stripe-checkout
-npm install
-STRIPE_SECRET_KEY=sk_... \
-STRIPE_WEBHOOK_SECRET=whsec_... \
-APPWRITE_ENDPOINT=... \
-APPWRITE_PROJECT_ID=... \
-APPWRITE_API_KEY=... \
-APPWRITE_DATABASE_ID=... \
-node server.js
+Backend roda como **Appwrite Cloud Functions** no mesmo projeto do sync (`nyc.cloud.appwrite.io`).
+
+**Functions:**
+
+| Function | HTTP domain (exemplo) | Rotas |
+|---|---|---|
+| `stripe-checkout` | `https://67abc123.nyc.appwrite.run` | `POST /create-checkout-session`, `POST /create-portal-session`, `GET /subscription/status` |
+| `stripe-webhook` | `https://67def456.nyc.appwrite.run/webhook` | `POST /webhook` |
+
+**Variáveis de ambiente** (ambas functions, exceto webhook secret só na webhook):
+
+```
+STRIPE_SECRET_KEY=sk_...
+STRIPE_WEBHOOK_SECRET=whsec_...   # só stripe-webhook
+APPWRITE_ENDPOINT=https://nyc.cloud.appwrite.io/v1
+APPWRITE_PROJECT_ID=6a3c74e70029dbe8bb22
+APPWRITE_API_KEY=...
+APPWRITE_DATABASE_ID=6a3c78ed0025f5797df7
 ```
 
-### Configuração Stripe
+**Deploy via CLI:**
 
-1. Criar Products/Prices no Stripe Dashboard:
-   - `price_BASIC_MONTHLY` — R$ 12,90/mês
-   - `price_BASIC_ANNUAL` — R$ 99/ano
-   - `price_PREMIUM_MONTHLY` — R$ 24,90/mês
-   - `price_PREMIUM_ANNUAL` — R$ 199/ano
-2. Apontar webhook para `POST /webhook`
-3. Em `web/pricing.html`, alterar `CHECKOUT_API` para a URL do servidor
-4. No app, configurar endpoint via `SubscriptionService.setCheckoutEndpoint()`
+```bash
+cd scripts/appwrite-functions
+npm install
+appwrite push functions
+```
 
-### Price IDs no código
+Ver `scripts/appwrite-functions/README.md` para checklist completo (Console, Stripe webhook, domains).
 
-Definidos em `lib/models/subscription_plan.dart`:
+Rodar também `node scripts/appwrite-setup/setup.mjs` para garantir a table `subscriptions`.
 
-- Básico mensal: `price_BASIC_MONTHLY`
-- Básico anual: `price_BASIC_ANNUAL`
-- Premium mensal: `price_PREMIUM_MONTHLY`
-- Premium anual: `price_PREMIUM_ANNUAL`
+**Fallback local:** `scripts/stripe-checkout/server.js` (Express, deprecated) — útil para dev sem deploy.
+
+### Configuração Stripe (passo a passo)
+
+Ordem recomendada: Appwrite → Stripe Dashboard → variáveis → price IDs → app.
+
+1. **Appwrite (pré-requisito)** — rodar `node scripts/appwrite-setup/setup.mjs` (table `subscriptions`). Deploy das functions (`appwrite push functions`); copiar domain URLs em Console → Functions → Domains. Detalhes em `scripts/appwrite-functions/README.md`.
+2. **Products/Prices no Stripe Dashboard** — criar 2 produtos (Básico, Premium) com 4 prices recorrentes (BRL):
+   - Básico mensal R$ 12,90 · anual R$ 99
+   - Premium mensal R$ 24,90 · anual R$ 199
+   - Anotar cada `price_...` real (test e live têm IDs diferentes).
+3. **Webhook no Stripe Dashboard** — Developers → Webhooks → Add endpoint:
+   - URL: `https://{stripe-webhook-domain}/webhook` (domain da function `stripe-webhook`, **não** `/v1/functions/.../executions`)
+   - Eventos: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`
+   - Copiar o **Signing secret** (`whsec_...`) — é **por endpoint**; cada projeto/endpoint tem o seu.
+4. **Variáveis nas Appwrite Functions** — Console → Functions → Settings → Variables, **ou** preencher `scripts/appwrite-functions/.env` (+ `scripts/appwrite-setup/.env` para IDs Appwrite) e rodar:
+   ```bash
+   cd scripts/appwrite-functions && node set-function-vars.mjs
+   ```
+   - `STRIPE_SECRET_KEY` → **ambas** functions
+   - `STRIPE_WEBHOOK_SECRET` → **só** `stripe-webhook`
+   - `APPWRITE_*` → ambas (ver tabela em [Deploy do backend](#deploy-do-backend-appwrite-functions))
+5. **Price IDs no código** — substituir placeholders pelos IDs reais do Stripe em **dois** arquivos:
+   - `lib/models/subscription_plan.dart` (`stripePriceIdMonthly` / `stripePriceIdAnnual`)
+   - `scripts/appwrite-functions/shared/stripe-prices.js` (`PRICE_TO_TIER`) — o webhook usa este mapa para gravar o tier no Appwrite
+6. **Checkout URL no cliente** — `lib/config/stripe_config.dart` (`checkoutApiBase`) ou `--dart-define=STRIPE_CHECKOUT_API=https://{checkout-domain}`. Opcional: `web/pricing.html` → `CHECKOUT_API` = `{checkout-domain}/create-checkout-session`
+7. **Verificar** — `curl https://{checkout-domain}/` → `{"ok":true,...}`; pagamento teste → evento no webhook → registro em `subscriptions`; app consulta `GET {checkout-domain}/subscription/status?email=`
+
+Test mode vs live: usar chaves e price IDs do mesmo modo (test com test, live com live). Nunca commitar `.env`.
+
+### Price IDs no código (referência)
+
+Placeholders atuais — trocar pelos IDs reais do passo 5:
+
+| Plano | Mensal | Anual |
+|---|---|---|
+| Básico | `price_BASIC_MONTHLY` | `price_BASIC_ANNUAL` |
+| Premium | `price_PREMIUM_MONTHLY` | `price_PREMIUM_ANNUAL` |
 
 ---
 
@@ -265,13 +352,14 @@ Fonte: `PlanLimits` em `lib/models/subscription_plan.dart`.
 ## Próximos passos de implementação
 
 1. [ ] Criar produtos e prices no Stripe
-2. [ ] Deploy de `scripts/stripe-checkout/server.js`
+2. [ ] Deploy de `scripts/appwrite-functions/` (checkout + webhook)
 3. [ ] Collection `subscriptions` no Appwrite
-4. [ ] Registrar `SubscriptionService` no GetX (`main.dart`)
-5. [ ] Bloquear ações nos controllers/telas com `canAddCar()` etc.
-6. [ ] Tela de upgrade (WebView → `web/pricing.html` ou `url_launcher`)
-7. [ ] RevenueCat ao publicar na Play Store / App Store
-8. [ ] Fluxo de intercept no cancelamento (Customer Portal + tela no app)
+4. [x] Registrar `SubscriptionService` no GetX (`main.dart`)
+5. [x] Bloquear ações nos controllers/telas com `canAddCar()` etc.
+6. [ ] Checkout Stripe via URL externa na `PricingScreen` (Custom Tabs)
+7. [ ] App buscar tier no Appwrite após pagamento (não só simulação debug)
+8. [ ] (Opcional) Google Play Billing + RevenueCat para IAP nativo
+9. [ ] Fluxo de intercept no cancelamento (Customer Portal + tela no app)
 
 ---
 
@@ -279,7 +367,8 @@ Fonte: `PlanLimits` em `lib/models/subscription_plan.dart`.
 
 - R$ 10k/mês é meta agressiva para nicho consumer BR; gargalo tende a ser aquisição e conversão, não tabela de preços.
 - Conversão abaixo de 2% exige repensar: subir Premium para R$ 29,90 e focar multi-carro, ou pivot B2B (oficinas).
-- App Store / Play Store exigem IAP nativo para assinaturas in-app — Stripe sozinho não basta dentro do app mobile.
+- Play Store: Stripe via checkout **externo** + entitlement no servidor é viável; IAP nativo só é obrigatório se vender a assinatura **dentro** do fluxo in-app sem sair para pagamento externo.
+- Documentação vive em `D:\Projetos\docs\analyses\autolog\` (não no repo do app).
 
 ---
 

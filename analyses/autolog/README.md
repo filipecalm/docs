@@ -15,6 +15,7 @@ Documentação de planos, precificação, pagamentos e retenção do app **AutoL
 | Arquivo | Conteúdo |
 |---------|----------|
 | [monetizacao.md](./monetizacao.md) | Planos, preços, meta R$ 10k/mês, Stripe, upgrade e retenção |
+| [Stripe Checkout + Webhook](../../stripe-checkout-webhook.md) | Runbook técnico genérico (Dashboard, webhook, secrets, troubleshooting) |
 
 ## Arquivos relacionados no código
 
