@@ -16,6 +16,12 @@ Construir software, segurança e análise técnica com agente.
 
 **Acesse:** [app-development.md](./app-development.md)
 
+## Logo e Play Store
+
+Prompt genérico para o projeto aberto: detecta **Expo ou Flutter**, cria logo, configura ícone/splash no build e gera assets da Play Store (ícone **512×512**, feature graphic 1024×500, screenshots).
+
+**Acesse:** [prompt-05-logo-e-play-store.md](../../prompts-generic/prompt-05-logo-e-play-store.md)
+
 ## Outros
 
 | Nome | Fonte | Arquivo |

@@ -29,13 +29,15 @@ O catálogo original permanece em `prompts.md` com contexto e exemplos do DietOS
 | 2 | [prompt-02-system-design.md](./prompt-02-system-design.md) | Documentação técnica sem alterar código |
 | 3 | [prompt-03-play-store-assets.md](./prompt-03-play-store-assets.md) | Scripts e assets para lojas mobile |
 | 4 | [prompt-04-analise-produto.md](./prompt-04-analise-produto.md) | Mercado, features, monetização, roadmap |
+| 5 | [prompt-05-logo-e-play-store.md](./prompt-05-logo-e-play-store.md) | Logo + Play Store; wiring Expo ou Flutter |
 
 ## Ordem recomendada
 
 1. **Prompt 2** — baseline técnica
 2. **Prompt 4** — estratégia antes de features grandes
 3. **Prompt 1** — modernização faseada
-4. **Prompt 3** — assets, quando identidade visual estiver estável
+4. **Prompt 5** — logo + assets Play Store (preferir quando não há identidade visual)
+5. **Prompt 3** — assets copiando scripts de um projeto de referência
 
 ## Exemplos de entregáveis (Prompt 4)
 
