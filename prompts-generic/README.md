@@ -30,6 +30,7 @@ O catálogo original permanece em `prompts.md` com contexto e exemplos do DietOS
 | 3 | [prompt-03-play-store-assets.md](./prompt-03-play-store-assets.md) | Scripts e assets para lojas mobile |
 | 4 | [prompt-04-analise-produto.md](./prompt-04-analise-produto.md) | Mercado, features, monetização, roadmap |
 | 5 | [prompt-05-logo-e-play-store.md](./prompt-05-logo-e-play-store.md) | Logo + Play Store; wiring Expo ou Flutter |
+| — | [prompt-play-store-listing.md](../prompt-play-store-listing.md) | Copy Detalhes do app: nome/descrições no locale primário (PT-BR); release notes bilíngues com tags `<pt-BR>`/`<en-US>`; infere do repo |
 
 ## Ordem recomendada
 
