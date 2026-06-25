@@ -27,8 +27,10 @@ Plataformas: **Android** (produção via EAS/Play Store), **iOS** (configurado),
 | [decisions.md](./decisions.md) | ADRs inferidos das escolhas no código |
 | [prompts.md](./prompts.md) | Prompts úteis para modernização e documentação (com matriz de gaps) |
 | [prompts-generic/](./prompts-generic/) | Versões genéricas dos prompts (qualquer projeto/nicho) |
+| [prompt-play-store-listing.md](./prompt-play-store-listing.md) | Prompt reutilizável: Detalhes do app (pt-BR) + release notes com tags `<pt-BR>`/`<en-US>` |
 | [prompts-curated/](./prompts-curated/) | Prompts por [tipo](./prompts-curated/por-tipo.md) — pastas [youtube](./prompts-curated/youtube/), [instagram](./prompts-curated/instagram/), [carreira](./prompts-curated/carreira/), etc. |
 | [analyses/](./analyses/) | Entregáveis do Prompt 4 por projeto (produto, mercado, monetização) |
+| [stripe-checkout-webhook.md](./stripe-checkout-webhook.md) | Runbook genérico: Stripe Checkout externo + webhook (qualquer stack) |
 | [cursor-semantic-commits.md](./cursor-semantic-commits.md) | Commits semânticos no Cursor (skills, commands e User Rules globais) |
 | [cursor/](./cursor/) | Arquivos versionados para instalar em `~/.cursor/` |
 
