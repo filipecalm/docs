@@ -9,7 +9,7 @@ Cada pasta contém o relatório completo (Etapas 1–5), premissas, fontes e —
 | Projeto | Repositório | Data | Documentos |
 |---------|-------------|------|------------|
 | **Trilho** | [trillho](https://github.com/filipecalm/trillho) | 2026-06-18 | [product-analysis.md](./trilho/product-analysis.md) · [backlog.md](./trilho/backlog.md) · [github-issues.md](./trilho/github-issues.md) · [Issues #8–#30](https://github.com/filipecalm/trillho/issues) |
-| **Memory Game** | [memory_game](../../../memory_game) | 2026-06-19 | [product-analysis.md](./memory-game/product-analysis.md) · [backlog.md](./memory-game/backlog.md) · [github-issues.md](./memory-game/github-issues.md) · [Issues #1–#17](https://github.com/filipecalm/memory-game-monorepo/issues) |
+| **Memória Presente** | [memory_game](../../../memory_game) | 2026-06-19 | [Análise](./memory-game/product-analysis.md) · [Backlog](./memory-game/backlog.md) · [Issues](./memory-game/github-issues.md) · [Runbooks](./memory-game/operations/README.md) · [#1–#17](https://github.com/filipecalm/memory-game-monorepo/issues) |
 | **AutoLog** | [car_maintenance](../../../car_maintenance) | 2026-06 | [monetizacao.md](./autolog/monetizacao.md) |
 
 ## Como adicionar uma nova análise

@@ -92,6 +92,8 @@ Garante que serviços WSL (`WslService`, `LxssManager`) estão com startup `Auto
 
 **Deps:** Windows 11 (ou versão com WSL), WSL instalado.
 
+**Nota:** se o erro for `Wsl/0x80070422` por antivírus (AVG etc.), prefira startup **Manual** + allowlist — ver [utilitarios/wsl-erro-0x80070422.md](../utilitarios/wsl-erro-0x80070422.md). Este script força `Automatic` e pode não ser o remédio certo nesse caso.
+
 ---
 
 ### `set-titan-contact-secrets.ps1`

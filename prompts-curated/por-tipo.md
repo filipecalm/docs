@@ -8,11 +8,11 @@
 
 | Tipo | Pasta | Qtd. |
 |------|-------|------|
-| Conteúdo e redes sociais | [youtube/](./youtube/) · [instagram/](./instagram/) · [conteudo/](./conteudo/) | ~35 |
+| Conteúdo e redes sociais | [youtube/](./youtube/) · [instagram/](./instagram/) · [conteudo/](./conteudo/) | ~38 |
 | Produto digital e monetização | [produto-digital/](./produto-digital/) | 4 |
 | Carreira e emprego | [carreira/](./carreira/) | ~34 |
 | Aprendizado e estudo | [aprendizado/](./aprendizado/) | ~22 |
-| Desenvolvimento e engenharia | [desenvolvimento/](./desenvolvimento/) | 8 |
+| Desenvolvimento e engenharia | [desenvolvimento/](./desenvolvimento/) | 9 |
 | Finanças pessoais | [financas/](./financas/) | 2 |
 | Saúde e fitness | [saude/](./saude/) | 1 |
 | Concurso e certificação | [concurso/](./concurso/) | 1 |
@@ -38,6 +38,22 @@ Criação, crescimento e distribuição de conteúdo (Instagram, YouTube, Thread
 | 5 | Cronograma de Conteúdo | Calendário 30 dias |
 | 6 | Mapa de Monetização | 5 formas de monetizar |
 | 7 | Configuração de Automação | Post em massa e agendamento |
+
+### Instagram — Pipeline Reels virais (3)
+
+**Pasta:** [instagram/](./instagram/) · **Template:** [reels-virais-pipeline.md](./instagram/reels-virais-pipeline.md) · **Fonte:** WhatsApp 28/07/2026
+
+| # | Nome | Uso |
+|---|------|-----|
+| 1 | Coleta de Reels | Links de Reels >40k views por perfil |
+| 2 | Transcrição | yt-dlp + ffmpeg + whisper → arquivo único |
+| 3 | Framework viral | Diagnóstico de padrões + estrutura reutilizável |
+
+### Instagram — Playbook monetização (ebook → serviço)
+
+**Template:** [playbook-instagram-monetizacao.md](./instagram/playbook-instagram-monetizacao.md)
+
+Encadeia Faceless + Growth Kit + eBook + oferta de serviço. Modos: padrão, só ebook, só serviço, conta existente.
 
 ### YouTube (10+)
 
@@ -68,6 +84,8 @@ Mistérios, história, espaço, animais, tecnologia antiga, lugares abandonados,
 **Pasta:** [produto-digital/](./produto-digital/)
 
 eBooks, infoprodutos e receita com conteúdo.
+
+**Playbook pronto (Instagram → venda):** [playbook-instagram-monetizacao.md](./instagram/playbook-instagram-monetizacao.md)
 
 ---
 
@@ -104,6 +122,12 @@ Feynman · 80/20 · DeepSeek (7) · produtividade (6) · idiomas (7)
 **Fonte:** @gurudoprompt
 
 Arquiteto · Full Stack · Designer · Monetizador · Lançador — construção completa de aplicativos do zero.
+
+### ARCHITEKT — Prompt Mestre (1)
+
+**Template:** [arquiteto-apps.md](./desenvolvimento/arquiteto-apps.md) · **Fonte:** WhatsApp 28/07/2026
+
+4 fases: análise crítica → MVP → arquitetura (stack Next/tRPC/Prisma/…) → handoff `.md` para Claude Code.
 
 ### Outros (3)
 
@@ -160,10 +184,13 @@ Pensamento crítico (5 regras) · reflexão pessoal
 | Objetivo | Começar por |
 |----------|-------------|
 | Crescer Instagram faceless | [instagram/](./instagram/) (1→7) |
+| Engenharia reversa de Reels virais | [instagram/reels-virais-pipeline.md](./instagram/reels-virais-pipeline.md) |
+| Viralizar + vender ebook/serviço | [instagram/playbook-instagram-monetizacao.md](./instagram/playbook-instagram-monetizacao.md) |
 | Canal YouTube sem rosto | [youtube/](./youtube/) → workflow 5 passos |
 | Primeiro produto digital | [produto-digital/](./produto-digital/) |
 | Vaga remota | [carreira/](./carreira/) |
 | Estudar stack nova | [aprendizado/](./aprendizado/) |
+| Spec de app antes de codar | [desenvolvimento/arquiteto-apps.md](./desenvolvimento/arquiteto-apps.md) |
 | Construir um app do zero | [desenvolvimento/app-development.md](./desenvolvimento/app-development.md) |
 | MVP com Cursor | [desenvolvimento/co-fundador-tecnico.md](./desenvolvimento/co-fundador-tecnico.md) |
 | Validar ideia antes de codar | [comportamento-agente/pensamento-critico.md](./comportamento-agente/pensamento-critico.md) |

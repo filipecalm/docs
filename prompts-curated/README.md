@@ -9,12 +9,12 @@ Coleção de prompts extraídos de fontes externas (screenshots, redes sociais),
 | Pasta | Conteúdo |
 |-------|----------|
 | [youtube/](./youtube/) | 10 prompts YouTube + templates |
-| [instagram/](./instagram/) | 7 prompts conta faceless |
+| [instagram/](./instagram/) | Faceless, Growth Kit, pipeline Reels e playbook de monetização |
 | [conteudo/](./conteudo/) | Ideias de nicho (15 tópicos) |
 | [produto-digital/](./produto-digital/) | eBooks e infoprodutos |
 | [carreira/](./carreira/) | Emprego remoto, entrevistas, LinkedIn |
 | [aprendizado/](./aprendizado/) | Estudo, DeepSeek, idiomas, Feynman |
-| [desenvolvimento/](./desenvolvimento/) | 5 prompts App Development Kit + Co-Fundador Técnico, auditoria de segurança |
+| [desenvolvimento/](./desenvolvimento/) | App Development Kit, ARCHITEKT, Co-Fundador Técnico, auditoria de segurança |
 | [financas/](./financas/) | Orçamento e cortes |
 | [saude/](./saude/) | Treino, dieta e métricas de progresso |
 | [concurso/](./concurso/) | CESGRANRIO Banco do Brasil |
@@ -39,9 +39,9 @@ Cada pasta de tipo contém os prompts com placeholders padronizados — no mesmo
 | Pasta | Arquivos principais |
 |-------|---------------------|
 | [youtube/](./youtube/) | pacote-completo, workflow-sem-rosto, ideias-virais, titulos-virais, roteiro-magnetico |
-| [instagram/](./instagram/) | crescimento-faceless, instagram-growth |
+| [instagram/](./instagram/) | crescimento-faceless, instagram-growth, reels-virais-pipeline, playbook-instagram-monetizacao |
 | [aprendizado/](./aprendizado/) | produtividade |
-| [desenvolvimento/](./desenvolvimento/) | app-development, co-fundador-tecnico, auditoria-seguranca |
+| [desenvolvimento/](./desenvolvimento/) | app-development, arquiteto-apps, co-fundador-tecnico, auditoria-seguranca |
 | [financas/](./financas/) | orcamento-e-cortes |
 | [concurso/](./concurso/) | cesgranrio-bb |
 | [imagem/](./imagem/) | melhoria-imagem |

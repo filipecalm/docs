@@ -201,10 +201,10 @@ Backend roda como **Appwrite Cloud Functions** no mesmo projeto do sync (`nyc.cl
 
 **Functions:**
 
-| Function | HTTP domain (exemplo) | Rotas |
+| Function | HTTP domain | Rotas |
 |---|---|---|
-| `stripe-checkout` | `https://67abc123.nyc.appwrite.run` | `POST /create-checkout-session`, `POST /create-portal-session`, `GET /subscription/status` |
-| `stripe-webhook` | `https://67def456.nyc.appwrite.run/webhook` | `POST /webhook` |
+| `stripe-checkout` | `https://stripe-checkout.nyc.appwrite.run` | `POST /create-checkout-session`, `POST /create-portal-session`, `GET /subscription/status` |
+| `stripe-webhook` | `https://stripe-webhook.nyc.appwrite.run/webhook` | `POST /webhook` |
 
 **Variáveis de ambiente** (ambas functions, exceto webhook secret só na webhook):
 
@@ -231,42 +231,56 @@ Rodar também `node scripts/appwrite-setup/setup.mjs` para garantir a table `sub
 
 **Fallback local:** `scripts/stripe-checkout/server.js` (Express, deprecated) — útil para dev sem deploy.
 
-### Configuração Stripe (passo a passo)
+### Configuração Stripe (checklist)
 
-Ordem recomendada: Appwrite → Stripe Dashboard → variáveis → price IDs → app.
+Ordem recomendada: Appwrite → Stripe (produtos + webhook) → variáveis → price IDs no código → redeploy → app.
 
-1. **Appwrite (pré-requisito)** — rodar `node scripts/appwrite-setup/setup.mjs` (table `subscriptions`). Deploy das functions (`appwrite push functions`); copiar domain URLs em Console → Functions → Domains. Detalhes em `scripts/appwrite-functions/README.md`.
-2. **Products/Prices no Stripe Dashboard** — criar 2 produtos (Básico, Premium) com 4 prices recorrentes (BRL):
+**URLs de produção (Appwrite NYC):**
+
+| Recurso | URL |
+|---|---|
+| Checkout API | `https://stripe-checkout.nyc.appwrite.run` |
+| Webhook Stripe | `https://stripe-webhook.nyc.appwrite.run/webhook` |
+
+1. **Appwrite (pré-requisito)** — rodar `node scripts/appwrite-setup/setup.mjs` (table `subscriptions`). Deploy das functions (`appwrite push functions`); confirmar domains acima em Console → Functions → Domains. Detalhes em `scripts/appwrite-functions/README.md`.
+2. **Products/Prices no Stripe** — criar 2 produtos (`AutoLog Básico`, `AutoLog Premium`) com 4 prices recorrentes (BRL):
    - Básico mensal R$ 12,90 · anual R$ 99
    - Premium mensal R$ 24,90 · anual R$ 199
-   - Anotar cada `price_...` real (test e live têm IDs diferentes).
-3. **Webhook no Stripe Dashboard** — Developers → Webhooks → Add endpoint:
-   - URL: `https://{stripe-webhook-domain}/webhook` (domain da function `stripe-webhook`, **não** `/v1/functions/.../executions`)
+   - Anotar cada `price_...` (test e live têm IDs diferentes). Pode ser via Dashboard **ou** Stripe API.
+3. **Webhook no Stripe** — Developers → Webhooks → Add endpoint (ou API):
+   - URL: `https://stripe-webhook.nyc.appwrite.run/webhook` (**não** usar `/v1/functions/.../executions`)
    - Eventos: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`
-   - Copiar o **Signing secret** (`whsec_...`) — é **por endpoint**; cada projeto/endpoint tem o seu.
-4. **Variáveis nas Appwrite Functions** — Console → Functions → Settings → Variables, **ou** preencher `scripts/appwrite-functions/.env` (+ `scripts/appwrite-setup/.env` para IDs Appwrite) e rodar:
+   - Copiar o **Signing secret** (`whsec_...`) — é **por endpoint**; secret antigo de outro app (ex. DietOS) **não** serve.
+4. **Variáveis nas Appwrite Functions** — preencher `scripts/appwrite-functions/.env` (+ `scripts/appwrite-setup/.env` para IDs Appwrite) e rodar:
    ```bash
    cd scripts/appwrite-functions && node set-function-vars.mjs
    ```
    - `STRIPE_SECRET_KEY` → **ambas** functions
    - `STRIPE_WEBHOOK_SECRET` → **só** `stripe-webhook`
    - `APPWRITE_*` → ambas (ver tabela em [Deploy do backend](#deploy-do-backend-appwrite-functions))
-5. **Price IDs no código** — substituir placeholders pelos IDs reais do Stripe em **dois** arquivos:
+5. **Price IDs no código** — IDs reais do Stripe em **dois** arquivos:
    - `lib/models/subscription_plan.dart` (`stripePriceIdMonthly` / `stripePriceIdAnnual`)
    - `scripts/appwrite-functions/shared/stripe-prices.js` (`PRICE_TO_TIER`) — o webhook usa este mapa para gravar o tier no Appwrite
-6. **Checkout URL no cliente** — `lib/config/stripe_config.dart` (`checkoutApiBase`) ou `--dart-define=STRIPE_CHECKOUT_API=https://{checkout-domain}`. Opcional: `web/pricing.html` → `CHECKOUT_API` = `{checkout-domain}/create-checkout-session`
-7. **Verificar** — `curl https://{checkout-domain}/` → `{"ok":true,...}`; pagamento teste → evento no webhook → registro em `subscriptions`; app consulta `GET {checkout-domain}/subscription/status?email=`
+6. **Redeploy das functions** — após alterar `shared/stripe-prices.js`:
+   ```bash
+   cd scripts/appwrite-functions && appwrite push functions
+   ```
+7. **Checkout URL no cliente** — `lib/config/stripe_config.dart` já aponta para `https://stripe-checkout.nyc.appwrite.run`; ou `--dart-define=STRIPE_CHECKOUT_API=...`. Opcional: `web/pricing.html` → `CHECKOUT_API` = `{checkout-domain}/create-checkout-session`
+8. **Verificar**
+   - Health: `curl https://stripe-checkout.nyc.appwrite.run/` → `{"ok":true,"service":"autolog-stripe-checkout"}`
+   - Webhook vivo: `POST /webhook` sem header `stripe-signature` → `400 Missing stripe-signature header` (esperado)
+   - Fluxo completo: pagamento teste → evento no Stripe Dashboard → registro em `subscriptions` → app consulta `GET .../subscription/status?email=`
 
 Test mode vs live: usar chaves e price IDs do mesmo modo (test com test, live com live). Nunca commitar `.env`.
 
-### Price IDs no código (referência)
+### Price IDs no código (referência — live, jun/2026)
 
-Placeholders atuais — trocar pelos IDs reais do passo 5:
+| Plano | Produto Stripe | Mensal | Anual |
+|---|---|---|---|
+| Básico | `prod_Ulu25Okb3VXrud` | `price_1TmMEWCy1K0Ew08kitEiMcAQ` | `price_1TmMEWCy1K0Ew08ksoKV0skx` |
+| Premium | `prod_Ulu2j3pVCGU8JP` | `price_1TmMEYCy1K0Ew08kBSkifNKh` | `price_1TmMEYCy1K0Ew08kV65ITwTV` |
 
-| Plano | Mensal | Anual |
-|---|---|---|
-| Básico | `price_BASIC_MONTHLY` | `price_BASIC_ANNUAL` |
-| Premium | `price_PREMIUM_MONTHLY` | `price_PREMIUM_ANNUAL` |
+Webhook endpoint live: `we_1TmMEVCy1K0Ew08kcdbK9MQm`
 
 ---
 
@@ -351,9 +365,9 @@ Fonte: `PlanLimits` em `lib/models/subscription_plan.dart`.
 
 ## Próximos passos de implementação
 
-1. [ ] Criar produtos e prices no Stripe
-2. [ ] Deploy de `scripts/appwrite-functions/` (checkout + webhook)
-3. [ ] Collection `subscriptions` no Appwrite
+1. [x] Criar produtos e prices no Stripe (live)
+2. [x] Deploy de `scripts/appwrite-functions/` (checkout + webhook) — **redeploy** após mudança em `stripe-prices.js`
+3. [ ] Collection `subscriptions` no Appwrite (rodar `setup.mjs` se ainda não existir)
 4. [x] Registrar `SubscriptionService` no GetX (`main.dart`)
 5. [x] Bloquear ações nos controllers/telas com `canAddCar()` etc.
 6. [ ] Checkout Stripe via URL externa na `PricingScreen` (Custom Tabs)

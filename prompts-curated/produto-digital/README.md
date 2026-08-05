@@ -4,6 +4,7 @@ eBooks e infoprodutos.
 
 | Nome | Fonte | Onde |
 |------|-------|------|
+| **Playbook Instagram → ebook → serviço** | encadeia curated | [instagram/playbook-instagram-monetizacao.md](../instagram/playbook-instagram-monetizacao.md) |
 | eBook comercial (estratégia + estrutura) | carlos.sousasoares | [origens/from-screenshots.md](../origens/from-screenshots.md#produto-digital-e-monetização) |
 | eBook por nicho (Canal Dark) | ofcsuelen | idem |
 | Template eBook curto | carlos.sousasoares | [origens/from-salvas.md](../origens/from-salvas.md#criação-de-ebook) |

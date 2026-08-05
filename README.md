@@ -2,7 +2,7 @@
 
 Repositório central de documentação de System Design, prompts e análises de produto dos projetos em `Projetos/`.
 
-Documentação inicial gerada a partir do [DietOS](../DietOS); inclui também análises de outros apps (ex.: [Trilho](./analyses/trilho/)).
+Documentação inicial gerada a partir do [DietOS](../DietOS); inclui também análises de outros apps (ex.: [Trilho](./analyses/trilho/)) e runbooks do [SADT](./sadt/).
 
 ## Visão geral
 
@@ -33,6 +33,10 @@ Plataformas: **Android** (produção via EAS/Play Store), **iOS** (configurado),
 | [stripe-checkout-webhook.md](./stripe-checkout-webhook.md) | Runbook genérico: Stripe Checkout externo + webhook (qualquer stack) |
 | [cursor-semantic-commits.md](./cursor-semantic-commits.md) | Commits semânticos no Cursor (skills, commands e User Rules globais) |
 | [cursor/](./cursor/) | Arquivos versionados para instalar em `~/.cursor/` |
+| [sadt/](./sadt/) | SADT: ambiente local (banco/API/front) e horários 15 min |
+| [carreira/spread-react-native-pl/](./carreira/spread-react-native-pl/) | Candidatura Spread RN Pl: CVs ATS, match da vaga, storytelling e prep de entrevista técnica |
+| [utilitarios/wsl-erro-0x80070422.md](./utilitarios/wsl-erro-0x80070422.md) | Runbook: WSL `0x80070422` (serviço desativado / antivírus) |
+| [utilitarios/audio-sem-som-realtek-hdmi.md](./utilitarios/audio-sem-som-realtek-hdmi.md) | Runbook: PC sem áudio (ALC887 Unplugged → HDMI LG / AMD HD Audio) |
 
 ## Estrutura do repositório (resumo)
 

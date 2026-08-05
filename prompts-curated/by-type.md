@@ -27,7 +27,14 @@
 
 ## Instagram e redes sociais
 
-**Pasta:** [instagram/crescimento-faceless.md](./instagram/crescimento-faceless.md) · **Fonte:** @euthayboss
+**Pasta:** [instagram/](./instagram/)
+
+| Grupo | Template |
+|-------|----------|
+| Faceless (7) | [crescimento-faceless.md](./instagram/crescimento-faceless.md) |
+| Growth Kit (6) | [instagram-growth.md](./instagram/instagram-growth.md) |
+| Pipeline Reels virais (3) | [reels-virais-pipeline.md](./instagram/reels-virais-pipeline.md) |
+| Playbook monetização | [playbook-instagram-monetizacao.md](./instagram/playbook-instagram-monetizacao.md) |
 
 ---
 
@@ -81,6 +88,13 @@ Backend pleno (20) + difíceis (8) — [origens/from-salvas.md](./origens/from-s
 ## Desenvolvimento e engenharia
 
 **Pasta:** [desenvolvimento/](./desenvolvimento/)
+
+| Nome | Template |
+|------|----------|
+| App Development Kit | [app-development.md](./desenvolvimento/app-development.md) |
+| ARCHITEKT | [arquiteto-apps.md](./desenvolvimento/arquiteto-apps.md) |
+| Co-Fundador Técnico | [co-fundador-tecnico.md](./desenvolvimento/co-fundador-tecnico.md) |
+| Auditoria de segurança | [auditoria-seguranca.md](./desenvolvimento/auditoria-seguranca.md) |
 
 ---
 

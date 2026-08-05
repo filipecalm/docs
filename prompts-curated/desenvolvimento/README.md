@@ -22,6 +22,12 @@ Prompt genérico para o projeto aberto: detecta **Expo ou Flutter**, cria logo, 
 
 **Acesse:** [prompt-05-logo-e-play-store.md](../../prompts-generic/prompt-05-logo-e-play-store.md)
 
+## ARCHITEKT — Prompt Mestre
+
+Arquiteto sênior (produto + software + execução) que transforma ideia de app em `.md` de handoff (4 fases: análise, MVP, arquitetura, plano).
+
+**Acesse:** [arquiteto-apps.md](./arquiteto-apps.md)
+
 ## Outros
 
 | Nome | Fonte | Arquivo |

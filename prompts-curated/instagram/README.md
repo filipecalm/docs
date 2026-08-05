@@ -25,6 +25,24 @@
 
 **Acesse:** [instagram-growth.md](./instagram-growth.md)
 
+## Pipeline Reels virais
+
+3 etapas: coletar Reels >40k views → transcrever (yt-dlp + ffmpeg + whisper) → diagnóstico + framework de roteiros.
+
+| # | Etapa | Descrição |
+|---|-------|-----------|
+| 1 | Coleta | Links de Reels acima do limiar de views (sem inventar) |
+| 2 | Transcrição | Pipeline local: download → áudio → speech-to-text |
+| 3 | Framework | Padrões dos que mais viralizaram + estrutura reutilizável |
+
+**Acesse:** [reels-virais-pipeline.md](./reels-virais-pipeline.md)
+
+## Playbook — monetização (ebook → serviço)
+
+Sequência única: escolher oferta → nicho → Reels → calendário → ebook → upsell de serviço → auditoria.
+
+**Acesse:** [playbook-instagram-monetizacao.md](./playbook-instagram-monetizacao.md)
+
 ---
 
 **Índice geral:** [por-tipo.md](../por-tipo.md#conteúdo-e-redes-sociais)
