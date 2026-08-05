@@ -37,6 +37,7 @@ Plataformas: **Android** (produção via EAS/Play Store), **iOS** (configurado),
 | [carreira/spread-react-native-pl/](./carreira/spread-react-native-pl/) | Candidatura Spread RN Pl: CVs ATS, match da vaga, storytelling e prep de entrevista técnica |
 | [utilitarios/wsl-erro-0x80070422.md](./utilitarios/wsl-erro-0x80070422.md) | Runbook: WSL `0x80070422` (serviço desativado / antivírus) |
 | [utilitarios/audio-sem-som-realtek-hdmi.md](./utilitarios/audio-sem-som-realtek-hdmi.md) | Runbook: PC sem áudio (ALC887 Unplugged → HDMI LG / AMD HD Audio) |
+| [utilitarios/git-config-rebase.md](./utilitarios/git-config-rebase.md) | Git: `user.name`/`user.email`, `pull --rebase`, `rebase -i` |
 
 ## Estrutura do repositório (resumo)
 
